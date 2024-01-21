@@ -1,0 +1,62 @@
+.contactBox {
+  width: 100%;
+  height: max-content;
+  color: white;
+  background-color: rgb(7, 7, 7);
+  margin-top: 80px;
+}
+
+.contactContainer {
+  display: grid;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  max-width: 500px;
+  margin-inline: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.contactContainer > h2 {
+  margin-bottom: 0px;
+}
+
+.inputName,
+.inputEmail,
+.inputNumber {
+  height: 30px;
+  font-size: 15px;
+  padding-left: 10px;
+}
+
+.name {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.email,
+.number {
+  display: grid;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.subscribeButton {
+  height: 35px;
+  width: 130px;
+  font-size: 15px;
+  border: solid 1px;
+}
+.subscribeButton:hover {
+  cursor: pointer;
+  background-color: rgb(252, 208, 84);
+}
+
+.line {
+  background-color: rgb(76, 76, 76);
+  height: 0.5px;
+}

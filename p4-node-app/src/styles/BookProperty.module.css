@@ -1,0 +1,95 @@
+.title {
+  padding-block: 50px;
+  text-align: center;
+}
+
+.bookContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px;
+  margin-inline: auto;
+  margin-block: 100px;
+  text-align: justify;
+  border: solid 1px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.inputFirstName,
+.inputLastName,
+.inputEmail,
+.inputNumber,
+.inputId {
+  height: 30px;
+  width: 490px;
+  font-size: 15px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+.select {
+  height: 35px;
+  width: max-content;
+  padding-inline: 10px;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.chooseText {
+  padding-inline: 10px;
+  margin-bottom: 20px;
+}
+
+.dateContainer {
+  display: flex;
+  gap: 50px;
+}
+
+.inputDate {
+  height: 35px;
+  width: 100%;
+  padding-inline: 10px;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
+}
+
+.inputTime {
+  height: 35px;
+  width: 150px;
+  padding-inline: 10px;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.message {
+  width: 490px;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-block: 50px;
+}
+
+.sendMessageButton {
+  height: 35px;
+  width: 220px;
+  font-size: 15px;
+  border: solid 1px;
+}
+
+.sendMessageButton:hover {
+  cursor: pointer;
+  background-color: rgb(252, 208, 84);
+}

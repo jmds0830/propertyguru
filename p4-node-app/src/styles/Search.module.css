@@ -1,0 +1,74 @@
+.searchMenuContainer {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 1px 1px rgb(212, 212, 212);
+  background-color: white;
+  margin-top: -100px;
+  margin-bottom: 100px;
+}
+
+.searchTitle {
+  position: absolute;
+  padding-top: 20px;
+  padding-left: 50px;
+}
+
+.searchMenu {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+  gap: 10px;
+  background-color: white;
+  padding-inline: 50px;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  align-items: end;
+  height: max-content;
+  max-width: 1200px;
+}
+
+.propertyId,
+.propertyArea,
+.propertyType,
+.propertyMinPrice,
+.propertyMaxPrice {
+  display: flex;
+  flex-direction: column;
+}
+
+.select {
+  height: 40px;
+  min-width: 120px;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.input {
+  height: 34px;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+label {
+  font-size: 14px;
+}
+
+option {
+  font-size: 15px;
+}
+
+.searchButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  height: 40px;
+  width: 100%;
+  font-size: 15px;
+  border: solid 1px;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: rgb(252, 208, 84);
+}

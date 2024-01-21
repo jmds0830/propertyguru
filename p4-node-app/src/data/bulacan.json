@@ -1,0 +1,575 @@
+{
+  "properties": [
+    {
+      "id": "123001",
+      "info": {
+        "images": [
+          "./src/data/bulacan/123001/123001(1).jpg",
+          "./src/data/bulacan/123001/123001(2).jpg",
+          "./src/data/bulacan/123001/123001(3).jpg",
+          "./src/data/bulacan/123001/123001(4).jpg",
+          "./src/data/bulacan/123001/123001(5).jpg",
+          "./src/data/bulacan/123001/123001(6).jpg",
+          "./src/data/bulacan/123001/123001(7).jpg",
+          "./src/data/bulacan/123001/123001(8).jpg",
+          "./src/data/bulacan/123001/123001(9).jpg",
+          "./src/data/bulacan/123001/123001(10).jpg",
+          "./src/data/bulacan/123001/123001(11).jpg",
+          "./src/data/bulacan/123001/123001(12).jpg",
+          "./src/data/bulacan/123001/123001(13).jpg"
+        ],
+        "price": 13500000,
+        "area": "Bulacan",
+        "type": "Single Detached",
+        "sourcedFrom": "presello.com",
+        "uploadedOn": 231214,
+        "status": "AVAILABLE",
+        "location": "Plaridel, Bulacan",
+        "lotArea": 150,
+        "floorArea": 225,
+        "bedrooms": 3,
+        "bathrooms": 3,
+        "carpark": 3,
+        "title": "Impressive 3 Bedroom House for Sale in La Mirada Royale, Plaridel, Bulacan",
+        "features": [
+          "Brand New",
+          "2 Storeys",
+          "High Ceiling",
+          "Spacious Master Bedroom",
+          "Walk-in Closet",
+          "Premium Finish",
+          "Guest Room",
+          "Garden",
+          "A/C Units Included",
+          "LED Lights",
+          "High Fence",
+          "Dirty Kitchen",
+          "Laundry Area",
+          "Utility Area",
+          "Maid's Room w/ T&B"
+        ],
+        "neighborhood_features": [
+          "Private Gated Community",
+          "CCTV in Common Areas",
+          "Basketball Court",
+          "Guest Parking",
+          "Playground",
+          "Lush Greenery"
+        ],
+        "nearby_establishments": {
+          "parks_greenery": [],
+          "grocery": [
+            "Puregold Plaridel",
+            "Robinsons Supermarket - Pulilan",
+            "Massway Supermarket - Pulilan",
+            "Novo Supermarket"
+          ],
+          "school": [
+            "College of Our Lady of Mercy of Pulilan Foundation Inc.",
+            "Bulacan State University",
+            "National University-Baliwag"
+          ],
+          "mall_store": [
+            "SM Center Pulilan",
+            "Waltermart Mall Plaridel",
+            "Primark Center Plaridel",
+            "5/88 Shopping Mall GOLDEN PRIME"
+          ],
+          "hospital": [
+            "La Consolacion University General Hospital",
+            "Our Lady of Mercy General Hospital",
+            "Plaridel County Hospital"
+          ]
+        }
+      }
+    },
+    {
+      "id": "123002",
+      "info": {
+        "images": [
+          "./src/data/bulacan/123002/123002(1).jpg",
+          "./src/data/bulacan/123002/123002(2).jpg",
+          "./src/data/bulacan/123002/123002(3).jpg",
+          "./src/data/bulacan/123002/123002(4).jpg",
+          "./src/data/bulacan/123002/123002(5).jpg",
+          "./src/data/bulacan/123002/123002(6).jpg",
+          "./src/data/bulacan/123002/123002(7).jpg",
+          "./src/data/bulacan/123002/123002(8).jpg",
+          "./src/data/bulacan/123002/123002(9).jpg",
+          "./src/data/bulacan/123002/123002(10).jpg"
+        ],
+        "price": 12000000,
+        "area": "Bulacan",
+        "type": "Single Detached",
+        "sourcedFrom": "presello.com",
+        "uploadedOn": 231215,
+        "status": "AVAILABLE",
+        "location": "Meycauayan, Bulacan",
+        "lotArea": 137,
+        "floorArea": 200,
+        "bedrooms": 3,
+        "bathrooms": 3,
+        "carpark": 1,
+        "title": "Picturesque 3 Bedroom House for Sale in Meycauayan, Bulacan",
+        "features": [
+          "2 Storeys",
+          "High Ceiling",
+          "Spacious Master Bedroom",
+          "Walk-in Closet",
+          "Premium Finish",
+          "Guest Room",
+          "Garden",
+          "A/C Units Included",
+          "LED Lights",
+          "High Fence",
+          "Dirty Kitchen",
+          "Laundry Area",
+          "Utility Area",
+          "Maid's Room w/ T&B"
+        ],
+        "neighborhood_features": [
+          "Private Gated Community",
+          "CCTV in Common Areas",
+          "Basketball Court",
+          "Guest Parking",
+          "Playground",
+          "Lush Greenery"
+        ],
+        "nearby_establishments": {
+          "parks_greenery": ["Philippine Arena Garden"],
+          "grocery": [
+            "SM Hypermarket",
+            "Puregold",
+            "Savemore",
+            "Public Market"
+          ],
+          "school": [
+            "Manila Central University",
+            "De La Salle Araneta University",
+            "Our Lady of Fatima University Valenzuela Campus"
+          ],
+          "mall_store": [
+            "EMA Town Center",
+            "Newstar Marilao Bulacan",
+            "SM City Marilao"
+          ],
+          "hospital": [
+            "Meycauayan Doctor's Hospital Inc.",
+            "St. Michael Family Hospital",
+            "Meycauayan General Hospital",
+            "marymoiunt Hospital, Inc."
+          ]
+        }
+      }
+    },
+    {
+      "id": "123003",
+      "info": {
+        "images": [
+          "./src/data/bulacan/123003/123003(1).jpg",
+          "./src/data/bulacan/123003/123003(2).jpg",
+          "./src/data/bulacan/123003/123003(3).jpg",
+          "./src/data/bulacan/123003/123003(4).jpg",
+          "./src/data/bulacan/123003/123003(5).jpg",
+          "./src/data/bulacan/123003/123003(6).jpg"
+        ],
+        "price": 13500000,
+        "area": "Bulacan",
+        "type": "Single Detached",
+        "sourcedFrom": "presello.com",
+        "uploadedOn": 231215,
+        "status": "AVAILABLE",
+        "location": "Plaridel, Bulacan",
+        "lotArea": 114,
+        "floorArea": 174,
+        "bedrooms": 3,
+        "bathrooms": 3,
+        "carpark": 2,
+        "title": "Elegant 3 Bedroom House for Sale in La Mirada Royale Subdivision, Plaridel, Bulacan",
+        "features": [
+          "2 Storeys",
+          "High Ceiling",
+          "Spacious Master Bedroom",
+          "Walk-in Closet",
+          "Premium Finish",
+          "Guest Room",
+          "Porch",
+          "Barbecue Area",
+          "Stunning Architecture",
+          "LED Lights",
+          "High Fence",
+          "Laundry Area",
+          "Driver’s Room",
+          "Utility Area"
+        ],
+        "neighborhood_features": [
+          "Private Gated Community",
+          "CCTV in common areas",
+          "Basketball Court",
+          "Guest Parking",
+          "Playground",
+          "Lush Greenery"
+        ],
+        "nearby_establishments": {
+          "parks_greenery": ["Plaridel River Bend Hidden Nature Park"],
+          "grocery": [
+            "Waltermart Supermarket",
+            "Novo Supermarket",
+            "Savemore Market Primark Plaridel",
+            "Puregold Plaridel"
+          ],
+          "gym": ["Local gym"],
+          "school": [
+            "College of Our Lady of Mercy of Pulilan Foundation Inc.",
+            "Bulacan State University",
+            "National University-Baliwag"
+          ],
+          "mall_store": [
+            "SM Center Pulilan",
+            "Waltermart Mall Plaridel",
+            "Primark Center Plaridel",
+            "5/88 Shopping Mall Golden Prime"
+          ],
+          "hospital": [
+            "La Consolacion University General Hospital",
+            "Our Lady of Mercy General Hospital",
+            "Plaridel County Hospital"
+          ]
+        }
+      }
+    },
+    {
+      "id": "123004",
+      "info": {
+        "images": ["./src/data/bulacan/123004/123004(1).jpg"],
+        "price": 35400000,
+        "area": "Bulacan",
+        "type": "Farm Lot",
+        "sourcedFrom": "presello.com",
+        "uploadedOn": 231216,
+        "status": "AVAILABLE",
+        "location": "Doña Remedios Trinidad, Bulacan",
+        "lotArea": 140000,
+        "floorArea": 0,
+        "bedrooms": 0,
+        "bathrooms": 0,
+        "carpark": 0,
+        "title": "Extensive Farm Lot For Sale in Bulacan",
+
+        "features": [
+          "Raw Farm Lots",
+          "Near Biak-Na-Bato National Park",
+          "Beside Lots Turned into Staycation Resorts",
+          "Classification: Agricultural",
+          "Good for Investment"
+        ],
+        "neighborhood_features": [],
+        "nearby_establishments": {
+          "parks_greenery": ["Ecofarm Park", "Lovely Ridges Park"],
+          "grocery": [
+            "RCS Supermarket San Miguel",
+            "Savemore Market San Ildefonso",
+            "Grand Union Supermarket Inc."
+          ],
+          "school": [
+            "St. Paul University at San Miguel",
+            "Bulacan State University - San Rafael Campus",
+            "Baliuag University"
+          ],
+          "mall_store": [
+            "Shoppetown Center",
+            "Vista Mall San Ildefonso",
+            "HBC Building",
+            "Vista Mall Sta. Maria"
+          ],
+          "hospital": [
+            "De Jesus General Hospital",
+            "Our Lady of Mercy General Hospital",
+            "Norzagaray Municipal Hospital",
+            "San Miguel District Hospital"
+          ]
+        }
+      }
+    },
+    {
+      "id": "123005",
+      "info": {
+        "images": [
+          "./src/data/bulacan/123005/123005(1).jpg",
+          "./src/data/bulacan/123005/123005(2).jpg",
+          "./src/data/bulacan/123005/123005(3).jpg",
+          "./src/data/bulacan/123005/123005(4).jpg",
+          "./src/data/bulacan/123005/123005(5).jpg"
+        ],
+        "price": 14000000,
+        "area": "Bulacan",
+        "type": "Single Detached",
+        "sourcedFrom": "presello.com",
+        "uploadedOn": 231216,
+        "status": "AVAILABLE",
+        "location": "Plaridel, Bulacan",
+        "lotArea": 153,
+        "floorArea": 225,
+        "bedrooms": 3,
+        "bathrooms": 3,
+        "carpark": 2,
+        "title": "Marvelous House For Sale In La Mirada Royale, Plaridel, Bulacan",
+        "features": [
+          "2 Storeys",
+          "Fully Furnished",
+          "Facing Morning Sun",
+          "Gym Area with Equipment",
+          "Walk-in Closet and Bathtub for Master Bedroom",
+          "Premium Finish",
+          "High Ceiling",
+          "Dirty Kitchen",
+          "A/C Units Included",
+          "Outdoor Lanai",
+          "Smart Lock Main Door",
+          "CCTV Cameras for Security",
+          "Water Tank",
+          "Full Height windows",
+          "No History of Flood"
+        ],
+        "neighborhood_features": [
+          "Private Gated Community",
+          "CCTV in common areas",
+          "Basketball Court",
+          "Guest Parking",
+          "Playground",
+          "Spacious Driveways",
+          "Lush Greenery"
+        ],
+        "nearby_establishments": {
+          "parks_greenery": [],
+          "grocery": [
+            "Puregold Plaridel",
+            "Robinsons Supermarket - Pulilan",
+            "Massway Supermarket - Pulilan",
+            "Novo Supermarket"
+          ],
+          "school": [
+            "College of Our Lady of Mercy of Pulilan Foundation Inc.",
+            "Bulacan State University",
+            "National University-Baliwag"
+          ],
+          "mall_store": [
+            "SM Center Pulilan",
+            "Waltermart Mall Plaridel",
+            "Primark Center Plaridel",
+            "5/88 Shopping Mall GOLDEN PRIME"
+          ],
+          "hospital": [
+            "La Consolacion University General Hospital",
+            "Our Lady of Mercy General Hospital",
+            "Plaridel County Hospital"
+          ]
+        }
+      }
+    },
+    {
+      "id": "123006",
+      "info": {
+        "images": [
+          "./src/data/bulacan/123006/123006(1).jpg",
+          "./src/data/bulacan/123006/123006(2).jpg",
+          "./src/data/bulacan/123006/123006(3).jpg",
+          "./src/data/bulacan/123006/123006(4).jpg",
+          "./src/data/bulacan/123006/123006(5).jpg",
+          "./src/data/bulacan/123006/123006(6).jpg",
+          "./src/data/bulacan/123006/123006(7).jpg",
+          "./src/data/bulacan/123006/123006(8).jpg",
+          "./src/data/bulacan/123006/123006(9).jpg",
+          "./src/data/bulacan/123006/123006(10).jpg",
+          "./src/data/bulacan/123006/123006(11).jpg",
+          "./src/data/bulacan/123006/123006(12).jpg",
+          "./src/data/bulacan/123006/123006(13).jpg"
+        ],
+        "price": 34000000,
+        "area": "Bulacan",
+        "type": "Single Detached",
+        "sourcedFrom": "presello.com",
+        "uploadedOn": 231217,
+        "status": "AVAILABLE",
+        "location": "Meycauyan, Bulacan",
+        "lotArea": 322,
+        "floorArea": 702,
+        "bedrooms": 5,
+        "bathrooms": 6,
+        "carpark": 4,
+        "title": "Attractive 5 Bedroom House and Lot for Sale in Bulacan",
+        "features": [
+          "Smart Home",
+          "Walk-in Closet",
+          "Dirty Kitchen",
+          "Premium Finish",
+          "Family Room",
+          "Guest Room",
+          "Spacious Master Bedroom",
+          "Porch",
+          "Barbecue Area",
+          "A/C Units Included",
+          "Swimming Pool",
+          "Personal Elevator",
+          "Lush Garden",
+          "LED lights",
+          "High Ceiling",
+          "Foyer",
+          "Lanai",
+          "Water Storage Tank",
+          "High Fence",
+          "Laundry Area",
+          "Maid's Room",
+          "Driver’s Room",
+          "Gym",
+          "Utility Area",
+          "Guest Parking"
+        ],
+        "neighborhood_features": [
+          "Private Gated Community",
+          "CCTV in Common Areas",
+          "Clubhouse",
+          "Basketball Court",
+          "Guest Parking",
+          "Playground",
+          "Spacious Driveways",
+          "Lush Greenery"
+        ],
+        "nearby_establishments": {
+          "parks_greenery": ["Valenzuela People's Park", "Philippine Arena"],
+          "grocery": ["SM Hypermarket", "Puregold", "Local Groceries"],
+          "school": [
+            "Our Lady Of Fatima University",
+            "Quezon City University - San Bartolome",
+            "University of the East Caloocan"
+          ],
+          "mall_store": ["SM Marilao", "SM City Novaliches"],
+          "hospital": [
+            "Marilao Saint Michael Family Hospital,Inc.",
+            "Valenzuela City General Hospital",
+            "Lady of Lourdes Hospital",
+            "Hope General Hospital"
+          ]
+        }
+      }
+    },
+    {
+      "id": "123007",
+      "info": {
+        "images": [
+          "./src/data/bulacan/123007/123007(1).jpg",
+          "./src/data/bulacan/123007/123007(2).jpg",
+          "./src/data/bulacan/123007/123007(3).jpg",
+          "./src/data/bulacan/123007/123007(4).jpg",
+          "./src/data/bulacan/123007/123007(5).jpg",
+          "./src/data/bulacan/123007/123007(6).jpg",
+          "./src/data/bulacan/123007/123007(7).jpg",
+          "./src/data/bulacan/123007/123007(8).jpg"
+        ],
+        "price": 12000000,
+        "area": "Bulacan",
+        "type": "Single Detached",
+        "sourcedFrom": "presello.com",
+        "uploadedOn": 231216,
+        "status": "SOLD",
+        "location": "Plaridel, Bulacan",
+        "lotArea": 150,
+        "floorArea": 210,
+        "bedrooms": 3,
+        "bathrooms": 3,
+        "carpark": 3,
+        "title": "Awe-inspiring Brand New House and Lot For Sale in La Mirada Royale Subdivision, Plaridel, Bulacan",
+        "features": [
+          "Brand New",
+          "Premium Finish",
+          "Semi-Furnished",
+          "Lanai",
+          "Guest Room",
+          "Spacious Master Bedroom",
+          "Walk-in Closet",
+          "Barbecue Area",
+          "A/C Units Included",
+          "High Ceiling",
+          "Lanai",
+          "Water Storage Tank",
+          "High Fence",
+          "Laundry Area",
+          "Utility Area",
+          "Guest Parking"
+        ],
+        "neighborhood_features": [
+          "Private Gated Community",
+          "CCTV in Common Areas",
+          "Clubhouse",
+          "Basketball Court",
+          "Guest Parking",
+          "Playground",
+          "Spacious Driveways",
+          "Lush Greenery"
+        ],
+        "nearby_establishments": {
+          "parks_greenery": [],
+          "grocery": ["SM Hypermarket", "Puregold", "Savemore"],
+          "school": [
+            "College of Our Lady of Mercy of Pulilan Foundation Inc.",
+            "Bulacan State University",
+            "National University-Baliwag"
+          ],
+          "mall_store": [
+            "SM Center Pulilan",
+            "Waltermart Mall Plaridel",
+            "Primark Center Plaridel",
+            "5/88 Shopping Mall GOLDEN PRIME"
+          ],
+          "hospital": [
+            "La Consolacion University General Hospital",
+            "Our Lady of Mercy General Hospital",
+            "Plaridel County Hospital"
+          ]
+        }
+      }
+    },
+    {
+      "id": "123008",
+      "info": {
+        "images": ["./src/data/bulacan/123008/123008(1).jpg"],
+        "price": 114471000,
+        "area": "Bulacan",
+        "type": "Vacant Lot",
+        "sourcedFrom": "presello.com",
+        "uploadedOn": 231218,
+        "status": "AVAILABLE",
+        "location": "San Jose Del Monte, Bulacan",
+        "lotArea": 11471,
+        "floorArea": 0,
+        "bedrooms": 0,
+        "bathrooms": 0,
+        "carpark": 0,
+        "title": "Massive Lot For Sale in San Jose Del Monte, Bulacan",
+        "features": ["50m Frontage", "250m Width"],
+        "neighborhood_features": ["Private Community"],
+        "nearby_establishments": {
+          "parks_greenery": ["Avilon Zoo", "La Mesa Eco Park"],
+          "grocery": [
+            "Puregold Starmall San Jose Del Monte",
+            "Puregold Muzon",
+            "Every Minute Supermarket"
+          ],
+          "school": [],
+          "mall_store": [
+            "Metroplaza Mall",
+            "SM San Jose Del Monte",
+            "SM Marilao"
+          ],
+          "hospital": [
+            "Ospital Ng San Jose Del Monte",
+            "Kairos Hospital",
+            "Nodado General Hospital",
+            "Grace General Hospital",
+            "Skyline Hospital and Medical Center"
+          ]
+        }
+      }
+    }
+  ]
+}

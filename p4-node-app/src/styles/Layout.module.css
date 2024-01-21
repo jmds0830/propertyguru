@@ -1,0 +1,120 @@
+.topInfoContainer {
+  background-color: rgb(7, 7, 7);
+  width: 100%;
+  z-index: 1;
+}
+
+.topInfo {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  color: whitesmoke;
+}
+
+.topInfo > p {
+  padding-right: 30px;
+  font-size: 14px;
+}
+
+.topFacebook,
+.topInstagram {
+  height: 15px;
+  padding-right: 15px;
+}
+
+.topX {
+  height: 13px;
+  padding-right: 15px;
+}
+
+.header {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: max-content;
+  width: 100%;
+  position: sticky;
+  background-color: rgb(7, 7, 7);
+  z-index: 1;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding-inline: 20px;
+}
+
+.navbarMenu {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.link {
+  font-size: 15px;
+}
+
+a:link,
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(252, 208, 84);
+}
+
+.bookButton {
+  height: 30px;
+  width: 150px;
+  border: solid 1px;
+}
+
+.bookButton:hover {
+  cursor: pointer;
+  background-color: rgb(252, 208, 84);
+}
+
+.main {
+  min-height: 100vh;
+}
+
+.footer {
+  color: whitesmoke;
+  background-color: rgb(7, 7, 7);
+}
+
+.socialContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  margin: auto;
+}
+
+.socialContainer > h3 {
+  margin-top: 50px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+}
+
+.facebook,
+.instagram,
+.phone {
+  height: 25px;
+  padding-inline: 10px;
+  margin-bottom: 50px;
+}
+
+.x {
+  height: 20px;
+  padding-inline: 10px;
+  margin-bottom: 50px;
+}

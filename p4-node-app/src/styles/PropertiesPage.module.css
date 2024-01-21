@@ -1,0 +1,132 @@
+.propertiesBox {
+  max-width: 1200px;
+  margin: auto;
+  padding-inline: 20px;
+}
+
+.coverPhoto {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.propertyBox {
+  display: grid;
+  justify-content: center;
+  margin: auto;
+  max-width: 1200px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+}
+
+.propertyContainer {
+  max-height: 500px;
+  max-width: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+  box-shadow: 0 0 1px 1px rgb(212, 212, 212);
+  transition: box-shadow 0.5s ease;
+}
+
+.propertyContainer:hover {
+  box-shadow: 0 0 20px 1px rgb(212, 212, 212);
+}
+
+.areaContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 5px;
+  position: absolute;
+  background-color: rgba(127, 127, 127, 0.8);
+  margin-top: 15px;
+  margin-left: 15px;
+  padding-inline: 10px;
+  border-radius: 10px;
+}
+
+.locationIcon {
+  height: 12px;
+}
+
+.area {
+  color: white;
+  font-size: 13px;
+}
+
+.propertyImage {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.propertyDetails {
+  padding-inline: 20px;
+}
+
+.peso {
+  font-size: 14px;
+}
+
+.propertyId {
+  font-size: 13px;
+  margin-block: -5px;
+}
+
+.propertyTitleContainer {
+  height: 46px;
+}
+
+.propertyTitle {
+  color: black;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.propertyTitle:hover {
+  text-decoration: underline;
+}
+
+.dimensionsContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.dimensionIcon {
+  height: 30px;
+  width: 30px;
+}
+
+.dimensions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-block: -10px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: end;
+  gap: 5px;
+  margin-block: 30px;
+}
+
+.paginationButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  border: solid 0.5px rgb(212, 212, 212);
+  cursor: pointer;
+}
+
+.activeButton {
+  background-color: rgb(252, 208, 84);
+}

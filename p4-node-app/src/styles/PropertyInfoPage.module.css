@@ -1,0 +1,102 @@
+.propertyInfoContainer {
+  max-width: 1200px;
+  margin: auto;
+  padding-inline: 20px;
+  padding-block: 50px;
+  position: relative;
+}
+
+.propertyImageContainer {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  padding-top: 30px;
+}
+
+.propertyImage {
+  max-height: 600px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.propertyImageIndex {
+  display: flex;
+  gap: 20px;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 35px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.bookProperty {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  padding: 20px;
+  border: solid 1px;
+}
+
+.propertyInfo {
+  display: flex;
+  gap: 120px;
+  align-items: center;
+  padding-block: 30px;
+}
+
+.bookButton {
+  width: 250px;
+  border: solid 1px;
+}
+
+.bookButton:hover {
+  cursor: pointer;
+  background-color: rgb(252, 208, 84);
+}
+
+.dimensionsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+.dimensions {
+  display: flex;
+  justify-content: left;
+}
+
+.dimensionIcon {
+  height: 50px;
+  width: 50px;
+  padding-right: 20px;
+}
+
+.additionalInfoContainer {
+  display: flex;
+  gap: 300px;
+}
+
+.additionalInfo {
+  padding-bottom: 20px;
+}

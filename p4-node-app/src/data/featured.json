@@ -1,0 +1,680 @@
+{
+  "area": "Featured",
+  "properties": [
+    {
+      "id": "323001",
+      "info": {
+        "images": [
+          "./src/data/antipolo/323001/323001(1).jpg",
+          "./src/data/antipolo/323001/323001(2).jpg",
+          "./src/data/antipolo/323001/323001(3).jpg",
+          "./src/data/antipolo/323001/323001(4).jpg",
+          "./src/data/antipolo/323001/323001(5).jpg",
+          "./src/data/antipolo/323001/323001(6).jpg",
+          "./src/data/antipolo/323001/323001(7).jpg",
+          "./src/data/antipolo/323001/323001(8).jpg"
+        ],
+        "price": 55000000,
+        "type": "Single Detached",
+        "sourcedFrom": "presello.com",
+        "uploadedOn": 231215,
+        "status": "AVAILABLE",
+        "location": "Ortigas Avenue Extension, Antipolo, Rizal",
+        "lotArea": 256,
+        "floorArea": 519,
+        "bedrooms": 4,
+        "bathrooms": 6,
+        "carpark": 3,
+        "title": "Tropical 4 Bedroom House for Sale in Antipolo, Rizal",
+        "features": [
+          "Brand New",
+          "Unobstructed Overlooking View of Laguna de Bay",
+          "City Skyline View",
+          "Smart Home",
+          "Automatic Gate",
+          "High Ceiling",
+          "Premium Finish",
+          "Semi-Furnished",
+          "Spacious Master Bedroom",
+          "Guest Room",
+          "Swimming Pool",
+          "Solar Panels",
+          "Service Kitchen",
+          "A/C Units Included",
+          "Maid's Room w/ T&B"
+        ],
+        "neighborhood_features": [
+          "Private Gated Area",
+          "CCTV in Common Areas",
+          "Basketball Court",
+          "Guest Parking",
+          "Playground",
+          "Lush Greenery"
+        ],
+        "nearby_establishments": {
+          "parks_greenery": [
+            "Hinulugang Taktak National Park",
+            "Sumulong Park",
+            "Tanglewood Park"
+          ],
+          "grocery": [
+            "WalterMart Antipolo",
+            "Shopwise Antipolo",
+            "Eastmart Supermarket",
+            "Robinsons Easymart"
+          ],
+          "school": [
+            "University of Rizal System",
+            "Antipolo Campus",
+            "STI- Antipolo Inc",
+            "SPI Systems College",
+            "Sumulong College of Arts and Sciences",
+            "San Beda University",
+            "Saint Benedict Building"
+          ],
+          "mall_store": [
+            "Antipolo Triangle Mall",
+            "Vista Mall Antipolo",
+            "All Home Antipolo",
+            "Antipolo Triangle Mall",
+            "iMall Antipolo, Robinsons Antipolo"
+          ],
+          "hospital": [
+            "Antipolo Doctors Hospital",
+            "Angono General Hospital",
+            "Assumption Specialty Hospital and Medical Center"
+          ]
+        }
+      }
+    },
+    {
+      "id": "323002",
+      "info": {
+        "images": [
+          "./src/data/antipolo/323002/323002(1).jpg",
+          "./src/data/antipolo/323002/323002(2).jpg",
+          "./src/data/antipolo/323002/323002(3).jpg",
+          "./src/data/antipolo/323002/323002(4).jpg",
+          "./src/data/antipolo/323002/323002(5).jpg",
+          "./src/data/antipolo/323002/323002(6).jpg",
+          "./src/data/antipolo/323002/323002(7).jpg",
+          "./src/data/antipolo/323002/323002(8).jpg",
+          "./src/data/antipolo/323002/323002(9).jpg",
+          "./src/data/antipolo/323002/323002(10).jpg",
+          "./src/data/antipolo/323002/323002(11).jpg",
+          "./src/data/antipolo/323002/323002(12).jpg",
+          "./src/data/antipolo/323002/323002(13).jpg"
+        ],
+        "price": 70000000,
+        "type": "Single Detached",
+        "sourcedFrom": "presello.com",
+        "uploadedOn": 231217,
+        "status": "AVAILABLE",
+        "location": "Beverly Hills Subdivision, Antipolo, Rizal",
+        "lotArea": 800,
+        "floorArea": 600,
+        "bedrooms": 5,
+        "bathrooms": 8,
+        "carpark": 6,
+        "title": "Serene 5 Bedroom House for Sale in Beverly Hills, Antipolo, Rizal",
+        "features": [
+          "High Ceiling",
+          "Premium Finish",
+          "Spacious Master Bedroom",
+          "Guest Room",
+          "High Fence",
+          "Swimming Pool",
+          "Gazeebo",
+          "Solar Panels",
+          "Service Kitchen",
+          "A/C Units Included",
+          "Maid's Room w/ T&B",
+          "Water Storage Tank"
+        ],
+        "neighborhood_features": [
+          "Private Gated Area",
+          "CCTV in Common Areas",
+          "Basketball Court",
+          "Guest Parking",
+          "Playground",
+          "Lush Greenery"
+        ],
+        "nearby_establishments": {
+          "parks_greenery": [],
+          "grocery": [
+            "Puregold",
+            "SM Hypermarket",
+            "Savemore",
+            "Shopwise Antipolo"
+          ],
+          "school": [
+            "PAREF Northfield School for Boys - Sun Valley Campus",
+            "Christian School of Antipolo"
+          ],
+          "mall_store": [
+            "Antipolo Valley Mall",
+            "Robonson's Place Antipolo",
+            "Xentro Mall Antipolo",
+            "SM Cherry Antipolo"
+          ],
+          "hospital": [
+            "Antipolo Doctors Hospital",
+            "Metro Antipolo Hospital and Medical Center",
+            "St. Anthony Medical Center",
+            "Antipolo Medical Center"
+          ]
+        }
+      }
+    },
+    {
+      "id": "323006",
+      "info": {
+        "images": [
+          "./src/data/antipolo/323006/323006(1).jpg",
+          "./src/data/antipolo/323006/323006(2).jpg",
+          "./src/data/antipolo/323006/323006(3).jpg",
+          "./src/data/antipolo/323006/323006(4).jpg",
+          "./src/data/antipolo/323006/323006(5).jpg",
+          "./src/data/antipolo/323006/323006(6).jpg",
+          "./src/data/antipolo/323006/323006(7).jpg",
+          "./src/data/antipolo/323006/323006(8).jpg",
+          "./src/data/antipolo/323006/323006(9).jpg",
+          "./src/data/antipolo/323006/323006(10).jpg",
+          "./src/data/antipolo/323006/323006(11).jpg"
+        ],
+        "price": 14000000,
+        "type": "Townhouse",
+        "sourcedFrom": "presello.com",
+        "uploadedOn": 231220,
+        "status": "AVAILABLE",
+        "location": "Greenhills Executive Homes, Antipolo, Rizal",
+        "lotArea": 90,
+        "floorArea": 211,
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "carpark": 2,
+        "title": "Dazzling 4 Bedroom Townhouse for Sale in Antipolo, Rizal",
+        "features": [
+          "High Ceiling",
+          "Premium Finish",
+          "Spacious Master Bedroom",
+          "Walk-in Closet",
+          "LED Lights",
+          "Service Kitchen",
+          "Utility Area",
+          "Laundry Area",
+          "Maid's Room",
+          "Water Storage Tank"
+        ],
+        "neighborhood_features": [
+          "Private Gated Area",
+          "CCTV in Common Areas",
+          "Basketball Court",
+          "Guest Parking",
+          "Playground",
+          "Lush Greenery"
+        ],
+        "nearby_establishments": {
+          "parks_greenery": [
+            "Sun Valley Golf Club",
+            "Forest Hills Golf and Country club"
+          ],
+          "grocery": ["Puregold", "SM Hypermarket, Savemore"],
+          "school": [
+            "PAREF Northfield School for Boys - Sun Valley Campus",
+            "Christian School of Antipolo"
+          ],
+          "mall_store": [
+            "Antipolo Valley Mall",
+            "Robonson's Place Antipolo",
+            "Xentro Mall Antipolo",
+            "SM Cherry Antipolo"
+          ],
+          "hospital": [
+            "Metro Antipolo Hospital and Medical Center",
+            "St. Anthony Medical Center",
+            "Antipolo Medical Center"
+          ]
+        }
+      }
+    },
+    {
+      "id": "223002",
+      "info": {
+        "images": [
+          "./src/data/batangas/223002/223002(1).jpg",
+          "./src/data/batangas/223002/223002(2).jpg",
+          "./src/data/batangas/223002/223002(3).jpg",
+          "./src/data/batangas/223002/223002(4).jpg",
+          "./src/data/batangas/223002/223002(5).jpg",
+          "./src/data/batangas/223002/223002(6).jpg",
+          "./src/data/batangas/223002/223002(7).jpg",
+          "./src/data/batangas/223002/223002(8).jpg"
+        ],
+        "price": 35000000,
+        "type": "Single Detached",
+        "sourcedFrom": "presello.com",
+        "uploadedOn": 231218,
+        "status": "AVAILABLE",
+        "location": "Lemery, Batangas",
+        "lotArea": 1400,
+        "floorArea": 222,
+        "bedrooms": 4,
+        "bathrooms": 2,
+        "carpark": 2,
+        "title": "Picturesque 4-Bedroom House for Sale in Leisure Farms Subdivision, Lemery, Batangas",
+        "features": [
+          "Fully Furnished",
+          "High Ceiling",
+          "Spacious Master Bedroom",
+          "Guest Room",
+          "Swimming Pool",
+          "Premium Finish",
+          "Service Kitchen",
+          "Laundry Area",
+          "A/C Units Included",
+          "Foyer",
+          "Dirty Kitchen",
+          "Utility Area",
+          "Maid's Room w/ T&B"
+        ],
+        "neighborhood_features": [
+          "Private Gated Area",
+          "CCTV in Common Areas",
+          "Basketball Court",
+          "Guest Parking",
+          "Playground",
+          "Lush Greenery"
+        ],
+        "nearby_establishments": {
+          "parks_greenery": ["Leisure Farms Park"],
+          "grocery": ["Local Grocery Stores"],
+          "school": ["Mahabang Gulod Elementary School"],
+          "mall_store": ["Xentro Mall Lemery"],
+          "hospital": ["Nasugbu Doctors Gen Hospital"]
+        }
+      }
+    },
+    {
+      "id": "223003",
+      "info": {
+        "images": [
+          "./src/data/batangas/223003/223003(1).jpg",
+          "./src/data/batangas/223003/223003(2).jpg",
+          "./src/data/batangas/223003/223003(3).jpg",
+          "./src/data/batangas/223003/223003(4).jpg",
+          "./src/data/batangas/223003/223003(5).jpg",
+          "./src/data/batangas/223003/223003(6).jpg",
+          "./src/data/batangas/223003/223003(7).jpg",
+          "./src/data/batangas/223003/223003(8).jpg",
+          "./src/data/batangas/223003/223003(9).jpg",
+          "./src/data/batangas/223003/223003(10).jpg",
+          "./src/data/batangas/223003/223003(11).jpg",
+          "./src/data/batangas/223003/223003(12).jpg",
+          "./src/data/batangas/223003/223003(13).jpg"
+        ],
+        "price": 170000000,
+        "type": "Single Detached",
+        "sourcedFrom": "presello.com",
+        "uploadedOn": 231218,
+        "status": "AVAILABLE",
+        "location": "Nasugbu, Batangas",
+        "lotArea": 847,
+        "floorArea": 480,
+        "bedrooms": 5,
+        "bathrooms": 5,
+        "carpark": 8,
+        "title": "Beautiful Sea Front Vacation Home in Peninsula De Punta Fuego",
+        "features": [
+          "Semi-Furnished",
+          "High Ceiling",
+          "Breath-Taking Views",
+          "Spacious Master Bedroom",
+          "Walk-in Closet",
+          "Guest Room",
+          "Swimming Pool",
+          "Premium Finish",
+          "Service Kitchen",
+          "Laundry Area",
+          "A/C Units Included",
+          "Foyer",
+          "Dirty Kitchen",
+          "Utility Area",
+          "Maid's Room w/ T&B",
+          "Water Storage Tank",
+          "Guest Parking"
+        ],
+        "neighborhood_features": [
+          "Private Gated Area",
+          "CCTV in Common Areas",
+          "Clubhouse",
+          "Basketball Court",
+          "Guest Parking",
+          "Playground",
+          "Lush Greenery"
+        ],
+        "nearby_establishments": {
+          "parks_greenery": ["Punta Fuego Resort"],
+          "grocery": ["Nasugbu Local Markets", "Local Stores", "Savemore"],
+          "school": [
+            "Nazareth School of Gen. Aguinaldo",
+            "Matagbak Elementary School",
+            "Cavite State University - Don Severino Delas Alas Campus"
+          ],
+          "mall_store": ["Citytile Plaza", "Waltermart Nasugbu"],
+          "hospital": [
+            "Nasugubu General Hospital, Inc.",
+            "Metropolitan Medical Center"
+          ]
+        }
+      }
+    },
+    {
+      "id": "223004",
+      "info": {
+        "images": [
+          "./src/data/batangas/223004/223004(1).jpg",
+          "./src/data/batangas/223004/223004(2).jpg",
+          "./src/data/batangas/223004/223004(3).jpg",
+          "./src/data/batangas/223004/223004(4).jpg",
+          "./src/data/batangas/223004/223004(5).jpg",
+          "./src/data/batangas/223004/223004(6).jpg",
+          "./src/data/batangas/223004/223004(7).jpg",
+          "./src/data/batangas/223004/223004(8).jpg",
+          "./src/data/batangas/223004/223004(9).jpg",
+          "./src/data/batangas/223004/223004(10).jpg",
+          "./src/data/batangas/223004/223004(11).jpg",
+          "./src/data/batangas/223004/223004(12).jpg",
+          "./src/data/batangas/223004/223004(13).jpg"
+        ],
+        "price": 70000000,
+        "type": "Single Detached",
+        "sourcedFrom": "presello.com",
+        "uploadedOn": 231218,
+        "status": "AVAILABLE",
+        "location": "San Juan, Batangas",
+        "lotArea": 626,
+        "floorArea": 619,
+        "bedrooms": 5,
+        "bathrooms": 6,
+        "carpark": 3,
+        "title": "Impressive 5 Bedroom Vacation House and Lot for Sale in San Juan, Batangas",
+        "features": [
+          "Smart Home",
+          "High Ceiling",
+          "Premium Finish",
+          "Spacious Master Bedroom",
+          "Walk-in Closet",
+          "Guest Room",
+          "Swimming Pool",
+          "Porch",
+          "Service Kitchen",
+          "Laundry Area",
+          "A/C Units Included",
+          "High Fence",
+          "Foyer",
+          "Lanai",
+          "Utility Area",
+          "Maid's Room w/ T&B",
+          "Water Storage Tank",
+          "Guest Parking"
+        ],
+        "neighborhood_features": [
+          "Residential Area",
+          "CCTV in Common Areas",
+          "Clubhouse",
+          "Basketball Court",
+          "Guest Parking",
+          "Playground",
+          "Lush Greenery"
+        ],
+        "nearby_establishments": {
+          "parks_greenery": ["Laiya Beach"],
+          "grocery": ["Golden M Superstore", "Local Store"],
+          "school": ["Laiya Elementary School", "Batangas State University"],
+          "mall_store": ["Laiya Beach Shop", "Saveway Shoppers Mall"],
+          "hospital": [
+            "San Juan Doctor's Hospital",
+            "St. Andrew Hospital",
+            "San Juan District Hospital"
+          ]
+        }
+      }
+    },
+    {
+      "id": "123001",
+      "info": {
+        "images": [
+          "./src/data/bulacan/123001/123001(1).jpg",
+          "./src/data/bulacan/123001/123001(2).jpg",
+          "./src/data/bulacan/123001/123001(3).jpg",
+          "./src/data/bulacan/123001/123001(4).jpg",
+          "./src/data/bulacan/123001/123001(5).jpg",
+          "./src/data/bulacan/123001/123001(6).jpg",
+          "./src/data/bulacan/123001/123001(7).jpg",
+          "./src/data/bulacan/123001/123001(8).jpg",
+          "./src/data/bulacan/123001/123001(9).jpg",
+          "./src/data/bulacan/123001/123001(10).jpg",
+          "./src/data/bulacan/123001/123001(11).jpg",
+          "./src/data/bulacan/123001/123001(12).jpg",
+          "./src/data/bulacan/123001/123001(13).jpg"
+        ],
+        "price": 13500000,
+        "type": "Single Detached",
+        "sourcedFrom": "presello.com",
+        "uploadedOn": 231214,
+        "status": "AVAILABLE",
+        "location": "Plaridel, Bulacan",
+        "lotArea": 150,
+        "floorArea": 225,
+        "bedrooms": 3,
+        "bathrooms": 3,
+        "carpark": 3,
+        "title": "Impressive 3 Bedroom House for Sale in La Mirada Royale, Plaridel, Bulacan",
+        "features": [
+          "Brand New",
+          "2 Storeys",
+          "High Ceiling",
+          "Spacious Master Bedroom",
+          "Walk-in Closet",
+          "Premium Finish",
+          "Guest Room",
+          "Garden",
+          "A/C Units Included",
+          "LED Lights",
+          "High Fence",
+          "Dirty Kitchen",
+          "Laundry Area",
+          "Utility Area",
+          "Maid's Room w/ T&B"
+        ],
+        "neighborhood_features": [
+          "Private Gated Community",
+          "CCTV in Common Areas",
+          "Basketball Court",
+          "Guest Parking",
+          "Playground",
+          "Lush Greenery"
+        ],
+        "nearby_establishments": {
+          "parks_greenery": [],
+          "grocery": [
+            "Puregold Plaridel",
+            "Robinsons Supermarket - Pulilan",
+            "Massway Supermarket - Pulilan",
+            "Novo Supermarket"
+          ],
+          "school": [
+            "College of Our Lady of Mercy of Pulilan Foundation Inc.",
+            "Bulacan State University",
+            "National University-Baliwag"
+          ],
+          "mall_store": [
+            "SM Center Pulilan",
+            "Waltermart Mall Plaridel",
+            "Primark Center Plaridel",
+            "5/88 Shopping Mall GOLDEN PRIME"
+          ],
+          "hospital": [
+            "La Consolacion University General Hospital",
+            "Our Lady of Mercy General Hospital",
+            "Plaridel County Hospital"
+          ]
+        }
+      }
+    },
+    {
+      "id": "123002",
+      "info": {
+        "images": [
+          "./src/data/bulacan/123002/123002(1).jpg",
+          "./src/data/bulacan/123002/123002(2).jpg",
+          "./src/data/bulacan/123002/123002(3).jpg",
+          "./src/data/bulacan/123002/123002(4).jpg",
+          "./src/data/bulacan/123002/123002(5).jpg",
+          "./src/data/bulacan/123002/123002(6).jpg",
+          "./src/data/bulacan/123002/123002(7).jpg",
+          "./src/data/bulacan/123002/123002(8).jpg",
+          "./src/data/bulacan/123002/123002(9).jpg",
+          "./src/data/bulacan/123002/123002(10).jpg"
+        ],
+        "price": 12000000,
+        "type": "Single Detached",
+        "sourcedFrom": "presello.com",
+        "uploadedOn": 231215,
+        "status": "AVAILABLE",
+        "location": "Meycauayan, Bulacan",
+        "lotArea": 137,
+        "floorArea": 200,
+        "bedrooms": 3,
+        "bathrooms": 3,
+        "carpark": 1,
+        "title": "Picturesque 3 Bedroom House for Sale in Meycauayan, Bulacan",
+        "features": [
+          "2 Storeys",
+          "High Ceiling",
+          "Spacious Master Bedroom",
+          "Walk-in Closet",
+          "Premium Finish",
+          "Guest Room",
+          "Garden",
+          "A/C Units Included",
+          "LED Lights",
+          "High Fence",
+          "Dirty Kitchen",
+          "Laundry Area",
+          "Utility Area",
+          "Maid's Room w/ T&B"
+        ],
+        "neighborhood_features": [
+          "Private Gated Community",
+          "CCTV in Common Areas",
+          "Basketball Court",
+          "Guest Parking",
+          "Playground",
+          "Lush Greenery"
+        ],
+        "nearby_establishments": {
+          "parks_greenery": ["Philippine Arena Garden"],
+          "grocery": [
+            "SM Hypermarket",
+            "Puregold",
+            "Savemore",
+            "Public Market"
+          ],
+          "school": [
+            "Manila Central University",
+            "De La Salle Araneta University",
+            "Our Lady of Fatima University Valenzuela Campus"
+          ],
+          "mall_store": [
+            "EMA Town Center",
+            "Newstar Marilao Bulacan",
+            "SM City Marilao"
+          ],
+          "hospital": [
+            "Meycauayan Doctor's Hospital Inc.",
+            "St. Michael Family Hospital",
+            "Meycauayan General Hospital",
+            "marymoiunt Hospital, Inc."
+          ]
+        }
+      }
+    },
+    {
+      "id": "123003",
+      "info": {
+        "images": [
+          "./src/data/bulacan/123003/123003(1).jpg",
+          "./src/data/bulacan/123003/123003(2).jpg",
+          "./src/data/bulacan/123003/123003(3).jpg",
+          "./src/data/bulacan/123003/123003(4).jpg",
+          "./src/data/bulacan/123003/123003(5).jpg",
+          "./src/data/bulacan/123003/123003(6).jpg"
+        ],
+        "price": 13500000,
+        "type": "Single Detached",
+        "sourcedFrom": "presello.com",
+        "uploadedOn": 231215,
+        "status": "AVAILABLE",
+        "location": "Plaridel, Bulacan",
+        "lotArea": 114,
+        "floorArea": 174,
+        "bedrooms": 3,
+        "bathrooms": 3,
+        "carpark": 2,
+        "title": "Elegant 3 Bedroom House for Sale in La Mirada Royale Subdivision, Plaridel, Bulacan",
+        "features": [
+          "2 Storeys",
+          "High Ceiling",
+          "Spacious Master Bedroom",
+          "Walk-in Closet",
+          "Premium Finish",
+          "Guest Room",
+          "Porch",
+          "Barbecue Area",
+          "Stunning Architecture",
+          "LED Lights",
+          "High Fence",
+          "Laundry Area",
+          "Driver’s Room",
+          "Utility Area"
+        ],
+        "neighborhood_features": [
+          "Private Gated Community",
+          "CCTV in common areas",
+          "Basketball Court",
+          "Guest Parking",
+          "Playground",
+          "Lush Greenery"
+        ],
+        "nearby_establishments": {
+          "parks_greenery": ["Plaridel River Bend Hidden Nature Park"],
+          "grocery": [
+            "Waltermart Supermarket",
+            "Novo Supermarket",
+            "Savemore Market Primark Plaridel",
+            "Puregold Plaridel"
+          ],
+          "gym": ["Local gym"],
+          "school": [
+            "College of Our Lady of Mercy of Pulilan Foundation Inc.",
+            "Bulacan State University",
+            "National University-Baliwag"
+          ],
+          "mall_store": [
+            "SM Center Pulilan",
+            "Waltermart Mall Plaridel",
+            "Primark Center Plaridel",
+            "5/88 Shopping Mall Golden Prime"
+          ],
+          "hospital": [
+            "La Consolacion University General Hospital",
+            "Our Lady of Mercy General Hospital",
+            "Plaridel County Hospital"
+          ]
+        }
+      }
+    }
+  ]
+}
