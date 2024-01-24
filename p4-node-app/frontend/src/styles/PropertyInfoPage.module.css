@@ -6,6 +6,10 @@
   position: relative;
 }
 
+.title {
+  line-height: 1.3;
+}
+
 .propertyImageContainer {
   max-width: 1200px;
   margin: auto;
@@ -59,7 +63,7 @@
 
 .propertyInfo {
   display: flex;
-  gap: 120px;
+  gap: 100px;
   align-items: center;
   padding-block: 30px;
 }

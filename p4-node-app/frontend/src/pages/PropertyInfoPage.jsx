@@ -10,16 +10,9 @@ function PropertyInfoPage() {
   const { id } = useParams();
 
   async function fetchPropertyData() {
-    // const areas = ['antipolo', 'batangas', 'bulacan'];
     try {
       const response = await fetch(`http://localhost:3000/property/${id}`);
       const result = await response.json();
-
-      // return result;
-
-      // const selectedProperty = responses
-      //   .flatMap((response) => response.properties)
-      //   .find((property) => property.id === id);
 
       setPropertyData(result);
     } catch (error) {
@@ -52,7 +45,7 @@ function PropertyInfoPage() {
         <div className={styles.propertyInfoContainer}>
           {propertyData.property?.map((property) => (
             <div key={property.propertyId}>
-              <h1>{property.title}</h1>
+              <h1 className={styles.title}>{property.title}</h1>
               <h1 className={styles.propertyPrice}>
                 <span className={styles.peso}>₱ </span>
                 {property.price?.toLocaleString()}
@@ -154,25 +147,23 @@ function PropertyInfoPage() {
                 <div>
                   <h3>NEARBY ESTABLISHMENTS</h3>
                   <p>Parks and Greenery:</p>
-                  {property.nearbyEstablishments?.parks_greenery?.map(
-                    (info) => (
-                      <li>{info}</li>
-                    )
-                  )}
+                  {property.parksGreenery?.map((info) => (
+                    <li>{info}</li>
+                  ))}
                   <p>Groceries:</p>
-                  {property.nearbyEstablishments?.grocery?.map((info) => (
+                  {property.grocery?.map((info) => (
                     <li>{info}</li>
                   ))}
                   <p>Schools:</p>
-                  {property.nearbyEstablishments?.school?.map((info) => (
+                  {property.school?.map((info) => (
                     <li>{info}</li>
                   ))}
                   <p>Malls:</p>
-                  {property.nearbyEstablishments?.mall_store?.map((info) => (
+                  {property.mallStore?.map((info) => (
                     <li>{info}</li>
                   ))}
                   <p>Hospitals:</p>
-                  {property.nearbyEstablishments?.hospital?.map((info) => (
+                  {property.hospital?.map((info) => (
                     <li>{info}</li>
                   ))}
                 </div>

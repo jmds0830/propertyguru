@@ -48,7 +48,7 @@ function HomePage() {
                       .toUpperCase()}
                   </span>
                 </div>
-                <Link to={`/property-info/${property.id}`}>
+                <Link to={`/property/${property.id}`}>
                   <img
                     className={styles.propertyImage}
                     src={property.info.images[0]}
@@ -60,7 +60,7 @@ function HomePage() {
                     Property ID: {property.id}
                   </div>
                   <div className={styles.propertyTitleContainer}>
-                    <Link to={`/property-info/${property.id}`}>
+                    <Link to={`/property/${property.id}`}>
                       <h3 className={styles.propertyTitle}>
                         {property.info.title}
                       </h3>

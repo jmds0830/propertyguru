@@ -24,7 +24,7 @@
 .inputName,
 .inputEmail,
 .inputNumber {
-  height: 30px;
+  height: 35px;
   font-size: 15px;
   padding-left: 10px;
 }
@@ -46,10 +46,11 @@
 }
 
 .subscribeButton {
-  height: 35px;
+  height: 40px;
   width: 130px;
   font-size: 15px;
   border: solid 1px;
+  margin-top: 10px;
 }
 .subscribeButton:hover {
   cursor: pointer;

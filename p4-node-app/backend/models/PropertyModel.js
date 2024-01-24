@@ -17,7 +17,11 @@ const propertySchema = new Schema({
   carpark: Number,
   features: Array,
   neighborhoodFeatures: Array,
-  nearbyEstablishments: Object,
+  parksGreenery: Array,
+  grocery: Array,
+  school: Array,
+  mallStore: Array,
+  hospital: Array,
 });
 
 const Property = model('Property', propertySchema);

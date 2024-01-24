@@ -8,7 +8,7 @@ function Properties() {
   const [data, setData] = useState([]);
   const [search, setSearch] = useState({
     propertyId: '',
-    area: 'any',
+    propertyArea: 'any',
     propertyType: 'any',
     minPrice: 'any',
     maxPrice: 'any',
@@ -18,13 +18,10 @@ function Properties() {
   const itemsPerPage = 9;
 
   async function fetchData() {
-    const areas =
-      search.area === 'any'
-        ? ['antipolo', 'batangas', 'bulacan']
-        : [search.area];
-
     try {
-      const response = await fetch('http://localhost:3000/properties');
+      const response = await fetch(
+        `http://localhost:3000/properties?propertyId=${search.propertyId}&propertyArea=${search.propertyArea}&propertyType=${search.propertyType}&minPrice=${search.minPrice}&maxPrice=${search.maxPrice}`
+      );
       const result = await response.json();
 
       setData(result);
@@ -40,7 +37,7 @@ function Properties() {
   const handleClear = () => {
     setSearch({
       propertyId: '',
-      area: 'any',
+      propertyArea: 'any',
       propertyType: 'any',
       minPrice: 'any',
       maxPrice: 'any',
@@ -48,17 +45,18 @@ function Properties() {
   };
 
   const handleSearch = () => {
-    setSearchClicked(true);
-    setCurrentPage(1);
     fetchData();
+    setCurrentPage(1);
+    setSearchClicked(true);
   };
 
   useEffect(() => {
     if (!searchClicked) {
       fetchData();
+      setCurrentPage(1);
       setSearchClicked(true);
     }
-  }, [searchClicked, search]);
+  }, [searchClicked, search, currentPage]);
 
   const indexOfLast = currentPage * itemsPerPage;
   const indexOfFirst = indexOfLast - itemsPerPage;
@@ -78,10 +76,10 @@ function Properties() {
             handleSearch={handleSearch}
           />
           <div className={styles.propertyBox}>
-            {data.length === 0 ? (
+            {currentItems.length === 0 ? (
               <h2>No Results Found</h2>
             ) : (
-              data.map((property) => (
+              currentItems.map((property) => (
                 <div
                   key={property.propertyId}
                   className={styles.propertyContainer}
@@ -93,7 +91,7 @@ function Properties() {
                       alt=""
                     />
                     <span className={styles.area}>
-                      {property.location.split(' ').slice(-1)[0].toUpperCase()}
+                      {property.area.toUpperCase()}
                     </span>
                   </div>
                   <Link to={`/property/${property.propertyId}`}>
@@ -163,7 +161,7 @@ function Properties() {
               {Array.from(
                 { length: Math.ceil(data.length / itemsPerPage) },
                 (_, index) => (
-                  <div
+                  <li
                     className={`${styles.paginationButton} ${
                       currentPage === index + 1 ? styles.activeButton : ''
                     }`}
@@ -171,7 +169,7 @@ function Properties() {
                     onClick={() => paginate(index + 1)}
                   >
                     {index + 1}
-                  </div>
+                  </li>
                 )
               )}
             </ul>

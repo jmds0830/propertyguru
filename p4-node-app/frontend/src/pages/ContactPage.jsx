@@ -25,6 +25,7 @@ function ContactPage() {
               Fill-out the contact form below and we will get in touch with you.
             </p>
           </div>
+
           <div className={styles.inputContainer}>
             <h3>CONTACT FORM</h3>
             <input

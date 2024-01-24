@@ -12,15 +12,23 @@ function Layout({ children }) {
             src="/facebook.png"
             alt="facebook"
           />
-          <p>Like us on Facebook</p>
+
+          <p>
+            <Link>Like us on Facebook</Link>
+          </p>
+
           <img
             className={styles.topInstagram}
             src="/instagram.png"
             alt="instagram"
           />
-          <p>Follow us on Instagram</p>
+          <p>
+            <Link>Follow us on Instagram</Link>
+          </p>
           <img className={styles.topX} src="/x.png" alt="x" />
-          <p>Follow us on X</p>
+          <p>
+            <Link>Follow us on X</Link>
+          </p>
         </div>
       </div>
       <header className={styles.header}>
@@ -52,17 +60,23 @@ function Layout({ children }) {
         <div className={styles.socialContainer}>
           <h3>CONNECT WITH US</h3>
           <div className={styles.social}>
-            <img
-              className={styles.instagram}
-              src="/instagram.png"
-              alt="instagram"
-            />
-            <img
-              className={styles.facebook}
-              src="/facebook.png"
-              alt="facebook"
-            />
-            <img className={styles.x} src="/x.png" alt="x" />
+            <Link>
+              <img
+                className={styles.instagram}
+                src="/instagram.png"
+                alt="instagram"
+              />
+            </Link>
+            <Link>
+              <img
+                className={styles.facebook}
+                src="/facebook.png"
+                alt="facebook"
+              />
+            </Link>
+            <Link>
+              <img className={styles.x} src="/x.png" alt="x" />
+            </Link>
           </div>
         </div>
       </footer>

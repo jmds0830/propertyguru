@@ -59,7 +59,7 @@
   background-color: rgba(127, 127, 127, 0.8);
   margin-top: 15px;
   margin-left: 15px;
-  padding-inline: 10px;
+  padding-inline: 5px;
   border-radius: 10px;
 }
 
@@ -69,7 +69,7 @@
 
 .area {
   color: white;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .propertyImage {
@@ -135,8 +135,8 @@
   align-items: center;
   max-width: 1200px;
   margin: auto;
-  margin-top: 90px;
-  margin-bottom: 120px;
+  margin-top: 120px;
+  margin-bottom: 150px;
 }
 
 .interiorImage {
@@ -146,10 +146,10 @@
 }
 
 .searchButton {
-  width: 200px;
+  width: 180px;
   border: solid 1px;
   margin-top: 10px;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .searchButton:hover {

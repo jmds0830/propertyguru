@@ -22,13 +22,13 @@ function Search({ search, handleChange, handleClear, handleSearch }) {
             <label>Location</label>
             <select
               className={styles.select}
-              value={search.area}
-              onChange={(e) => handleChange(e, 'area')}
+              value={search.propertyArea}
+              onChange={(e) => handleChange(e, 'propertyArea')}
             >
               <option value="any">Any</option>
-              <option value="antipolo">Antipolo</option>
-              <option value="batangas">Batangas</option>
-              <option value="bulacan">Bulacan</option>
+              <option value="Antipolo">Antipolo</option>
+              <option value="Batangas">Batangas</option>
+              <option value="Bulacan">Bulacan</option>
             </select>
           </div>
           <div className={styles.propertyType}>
@@ -62,6 +62,7 @@ function Search({ search, handleChange, handleClear, handleSearch }) {
               <option value="30000000">30 Million</option>
               <option value="40000000">40 Million</option>
               <option value="50000000">50 Million</option>
+              <option value="60000000">60 Million</option>
             </select>
           </div>
           <div className={styles.propertyMaxPrice}>
@@ -78,6 +79,7 @@ function Search({ search, handleChange, handleClear, handleSearch }) {
               <option value="50000000">50 Million</option>
               <option value="60000000">60 Million</option>
               <option value="70000000">70 Million</option>
+              <option value="10000000000">80 Million and up</option>
             </select>
           </div>
           <div className={styles.searchButtons}>

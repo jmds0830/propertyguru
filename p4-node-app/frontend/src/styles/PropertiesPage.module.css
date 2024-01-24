@@ -42,7 +42,7 @@
   background-color: rgba(127, 127, 127, 0.8);
   margin-top: 15px;
   margin-left: 15px;
-  padding-inline: 10px;
+  padding-inline: 5px;
   border-radius: 10px;
 }
 
@@ -52,7 +52,7 @@
 
 .area {
   color: white;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .propertyImage {
@@ -114,15 +114,15 @@
   display: flex;
   justify-content: end;
   gap: 5px;
-  margin-block: 30px;
+  margin-top: 50px;
 }
 
 .paginationButton {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
   border: solid 0.5px rgb(212, 212, 212);
   cursor: pointer;
 }
