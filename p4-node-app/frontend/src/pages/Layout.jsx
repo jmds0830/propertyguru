@@ -47,7 +47,7 @@ function Layout({ children }) {
               <Link to="/contact">CONTACT US</Link>
             </p>
           </div>
-          <Link to="/book-a-viewing">
+          <Link to="/book">
             <button className={styles.bookButton}>BOOK A VIEWING</button>
           </Link>
         </div>

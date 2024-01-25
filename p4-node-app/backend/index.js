@@ -103,7 +103,7 @@ app.post('/property', async (req, res) => {
   await newProperty.save();
 
   res.status(201).json({
-    message: 'SUCCESS! New property created',
+    message: 'SUCCESS! New property added',
     data: newProperty,
   });
   console.log();
@@ -149,6 +149,8 @@ app.patch('/property/:id', async (req, res) => {
       res.status(404).json({
         message: 'ERROR! Property not found ',
       });
+
+      return;
     }
 
     const {
@@ -206,6 +208,36 @@ app.patch('/property/:id', async (req, res) => {
     });
   }
 });
+
+app.delete('/property/:id', async (req, res) => {
+  try {
+    // const propertyToDelete = Number(req.params.id);
+    const properties = await Property.find();
+    const propertyIndex = properties.findIndex(
+      (property) => property.propertyId === Number(req.params.id)
+    );
+
+    if (propertyIndex === -1) {
+      res.status(404).json({
+        message: 'ERROR! Property not found',
+      });
+    }
+
+    properties.splice(propertyIndex, 1);
+
+    await Property.deleteOne({ propertyId: Number(req.params.id) });
+
+    res.status(200).json({
+      message: "Property deleted successfully'",
+    });
+  } catch (error) {
+    res.status(400).json({
+      message: 'ERROR! Property not found',
+    });
+  }
+});
+
+app.post('/book', async (req, res) => {});
 
 app.listen(PORT, () => {
   console.log(`App is listening to port ${PORT}`);

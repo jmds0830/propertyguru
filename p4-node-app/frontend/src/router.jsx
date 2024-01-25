@@ -24,7 +24,7 @@ const router = createBrowserRouter([
     element: <PropertyInfoPage />,
   },
   {
-    path: '/book-a-viewing',
+    path: '/book',
     element: <BookProperty />,
   },
   {

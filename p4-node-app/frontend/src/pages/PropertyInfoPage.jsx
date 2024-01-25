@@ -85,7 +85,7 @@ function PropertyInfoPage() {
                   Interested in this property? Schedule a visit and talk to one
                   of our real estate agents.
                 </p>
-                <Link to="/book-a-viewing">
+                <Link to="/book">
                   <button className={styles.bookButton}>
                     <h3>BOOK A VIEWING</h3>
                   </button>

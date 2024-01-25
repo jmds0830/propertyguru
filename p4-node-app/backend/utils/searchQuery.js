@@ -1,6 +1,12 @@
 function searchQuery(queryParams) {
-  const { propertyId, propertyArea, propertyType, minPrice, maxPrice } =
-    queryParams;
+  const {
+    propertyId = '',
+    propertyArea = 'any',
+    propertyType = 'any',
+    minPrice = 'any',
+    maxPrice = 'any',
+  } = queryParams;
+
   const query = {};
 
   if (propertyId !== '') {
@@ -16,7 +22,7 @@ function searchQuery(queryParams) {
   }
 
   if (minPrice !== 'any') {
-    query.price = { $gte: parseInt(minPrice) };
+    query.price = { ...query.price, $gte: parseInt(minPrice) };
   }
 
   if (maxPrice !== 'any') {
