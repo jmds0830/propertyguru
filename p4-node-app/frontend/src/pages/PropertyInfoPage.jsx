@@ -76,10 +76,10 @@ function PropertyInfoPage() {
                 )}
               </div>
               {/* <div className={styles.propertyImageIndex}>
-            {propertyData.info?.images.map((image, index) => (
-              <span key={index}>{index + 1}</span>
-            ))}
-          </div> */}
+                {propertyData.info?.images.map((image, index) => (
+                  <span key={index}>{index + 1}</span>
+                ))}
+              </div> */}
               <div className={styles.bookProperty}>
                 <p>
                   Interested in this property? Schedule a visit and talk to one

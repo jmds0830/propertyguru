@@ -38,6 +38,7 @@ app.post('/property', async (req, res) => {
     grocery,
     school,
     mallStore,
+    hospital,
   } = req.body;
 
   const newProperty = new Property({
@@ -135,14 +136,21 @@ app.get('/property/:id', async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      message: 'Property not found',
+      message: 'ERROR! Property not found',
     });
   }
 });
 
 app.patch('/property/:id', async (req, res) => {
   try {
-    const property = await Property.find({ propertyId: req.params.id });
+    const property = await Property.findOne({ propertyId: req.params.id });
+
+    if (!property) {
+      res.status(404).json({
+        message: 'ERROR! Property not found ',
+      });
+    }
+
     const {
       propertyId,
       title,
@@ -165,25 +173,28 @@ app.patch('/property/:id', async (req, res) => {
       hospital,
     } = req.body;
 
-    property.propertyId = propertyId;
-    property.title = title;
-    property.price = price;
-    property.area = area;
-    property.type = type;
-    property.status = status;
-    property.location = location;
-    property.lotArea = lotArea;
-    property.floorArea = floorArea;
-    property.bedrooms = bedrooms;
-    property.bathrooms = bathrooms;
-    property.carpark = carpark;
-    property.features = features;
-    property.neighborhoodFeatures = neighborhoodFeatures;
-    property.parksGreenery = parksGreenery;
-    property.grocery = grocery;
-    property.school = school;
-    property.mallStore = mallStore;
-    property.hospital = hospital;
+    property.propertyId = propertyId || property.propertyId;
+    property.title = title || property.title;
+    property.price = price || property.price;
+    property.area = area || property.area;
+    property.type = type || property.type;
+    property.status = status || property.status;
+    property.location = location || property.location;
+    property.lotArea = lotArea || property.lotArea;
+    property.floorArea = floorArea || property.floorArea;
+    property.bedrooms = bedrooms || property.bedrooms;
+    property.bathrooms = bathrooms || property.bathrooms;
+    property.carpark = carpark || property.carpark;
+    property.features = features || property.features;
+    property.neighborhoodFeatures =
+      neighborhoodFeatures || property.neighborhoodFeatures;
+    property.parksGreenery = parksGreenery || property.parksGreenery;
+    property.grocery = grocery || property.grocery;
+    property.school = school || property.school;
+    property.mallStore = mallStore || property.mallStore;
+    property.hospital = hospital || property.hospital;
+
+    await property.save();
 
     res.status(200).json({
       message: 'Property updated successfully',
@@ -191,7 +202,7 @@ app.patch('/property/:id', async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      message: 'Property not found',
+      message: 'ERROR! Property not found',
     });
   }
 });
