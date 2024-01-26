@@ -3,7 +3,9 @@ import process from 'node:process';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import Property from './models/PropertyModel.js';
+import Booking from './models/BookPropertyModel.js';
 import searchQuery from './utils/searchQuery.js';
+import validateBookingMiddleware from './middlewares/validateBookingMiddleware.js';
 import cors from 'cors';
 
 const app = express();
@@ -15,6 +17,7 @@ app.set('port', PORT);
 app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static('static'));
+app.use(express.json());
 
 app.post('/property', async (req, res) => {
   const {
@@ -106,7 +109,6 @@ app.post('/property', async (req, res) => {
     message: 'SUCCESS! New property added',
     data: newProperty,
   });
-  console.log();
 });
 
 app.get('/properties', async (req, res) => {
@@ -137,6 +139,7 @@ app.get('/property/:id', async (req, res) => {
   } catch (error) {
     res.status(400).json({
       message: 'ERROR! Property not found',
+      error: error.message,
     });
   }
 });
@@ -211,7 +214,6 @@ app.patch('/property/:id', async (req, res) => {
 
 app.delete('/property/:id', async (req, res) => {
   try {
-    // const propertyToDelete = Number(req.params.id);
     const properties = await Property.find();
     const propertyIndex = properties.findIndex(
       (property) => property.propertyId === Number(req.params.id)
@@ -237,7 +239,36 @@ app.delete('/property/:id', async (req, res) => {
   }
 });
 
-app.post('/book', async (req, res) => {});
+app.post('/book', validateBookingMiddleware, async (req, res) => {
+  const {
+    firstName,
+    lastName,
+    email,
+    contact,
+    propertyId,
+    scheduleDate,
+    scheduleTime,
+    customerMessage,
+  } = req.body;
+
+  const newBooking = new Booking({
+    firstName,
+    lastName,
+    email,
+    contact,
+    propertyId,
+    scheduleDate,
+    scheduleTime,
+    customerMessage,
+  });
+
+  await newBooking.save();
+
+  res.status(201).json({
+    message: 'SUCCESS! New booking added',
+    newBooking,
+  });
+});
 
 app.listen(PORT, () => {
   console.log(`App is listening to port ${PORT}`);

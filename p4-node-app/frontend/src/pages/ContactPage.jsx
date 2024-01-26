@@ -59,7 +59,7 @@ function ContactPage() {
               placeholder="Message (optional)"
             ></textarea>
             <div className={styles.buttonContainer}>
-              <button className={styles.sendMessageButton}>SEND MESSAGE</button>
+              <input type="submit" className={styles.sendMessageButton} />
             </div>
           </div>
         </div>
