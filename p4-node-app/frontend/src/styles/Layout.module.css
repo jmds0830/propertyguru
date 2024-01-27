@@ -79,6 +79,10 @@ a:hover {
   background-color: rgb(252, 208, 84);
 }
 
+.bookButton:active {
+  background-color: whitesmoke;
+}
+
 .main {
   min-height: 100vh;
 }

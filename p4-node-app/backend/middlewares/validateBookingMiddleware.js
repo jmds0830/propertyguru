@@ -19,13 +19,20 @@ function validateBookingMiddleware(req, res, next) {
     !scheduleTime
   ) {
     res.status(400).json({
-      message: 'Must input all necessary fields',
+      errors: {
+        firstName: 'First name is required',
+        lastName: 'Last name is required',
+        email: 'Email is required',
+        contact: 'Contact number is required',
+        propertyId: 'Property ID is required',
+        scheduleDate: 'Choose your preferred date',
+        scheduleTime: 'Choose your preferred time',
+      },
     });
-    console, log('Must input all necessary fields');
     return;
-  } else {
-    next();
   }
+
+  next();
 }
 
 export default validateBookingMiddleware;

@@ -33,27 +33,33 @@
   padding-left: 10px;
 }
 
-/* .select {
-  height: 35px;
-  width: max-content;
-  padding-inline: 10px;
-  font-size: 15px;
-  margin-bottom: 20px;
-} */
+.error {
+  margin-top: -15px;
+  margin-bottom: 5px;
+  color: red;
+  font-size: 14px;
+}
 
 .chooseText {
-  padding-inline: 10px;
   margin-bottom: 20px;
+}
+
+.date,
+.time {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .dateContainer {
   display: flex;
-  gap: 50px;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .inputDate {
   height: 35px;
-  width: 100%;
+  width: 290px;
   padding-inline: 10px;
   font-size: 15px;
   font-family: Arial, Helvetica, sans-serif;
@@ -69,7 +75,7 @@
 }
 
 .message {
-  width: 490px;
+  width: 495px;
   font-size: 16px;
   padding-top: 10px;
   padding-left: 10px;
@@ -92,4 +98,8 @@
 .sendMessageButton:hover {
   cursor: pointer;
   background-color: rgb(252, 208, 84);
+}
+
+.sendMessageButton:active {
+  background-color: whitesmoke;
 }

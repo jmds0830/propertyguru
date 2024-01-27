@@ -78,6 +78,10 @@
   background-color: rgb(252, 208, 84);
 }
 
+.bookButton:active {
+  background-color: whitesmoke;
+}
+
 .dimensionsContainer {
   display: flex;
   align-items: center;

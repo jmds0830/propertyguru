@@ -7,7 +7,6 @@ const propertySchema = new Schema({
   price: Number,
   area: String,
   type: String,
-  uploadedOn: Number,
   status: String,
   location: String,
   lotArea: Number,

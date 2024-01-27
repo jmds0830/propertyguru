@@ -120,8 +120,8 @@ function HomePage() {
               alt="Interior"
             />
           </div>
-          <div>
-            <h3>FIND YOUR PERFECT HOME WITH US.</h3>
+          <div className={styles.viewPropertiesText}>
+            <h2>FIND YOUR PERFECT HOME WITH US.</h2>
             <p>Browse through our listings of properties for sale.</p>
             <Link to={'/properties'}>
               <button className={styles.searchButton}>

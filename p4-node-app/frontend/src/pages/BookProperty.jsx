@@ -3,7 +3,7 @@ import Layout from './Layout';
 import styles from '../styles/BookProperty.module.css';
 
 function BookProperty() {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     firstName: '',
     lastName: '',
     email: '',
@@ -12,12 +12,9 @@ function BookProperty() {
     scheduleDate: '',
     scheduleTime: '',
     customerMessage: '',
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
+  const [formData, setFormData] = useState(initialFormData);
+  const [errors, setErrors] = useState({});
 
   async function handleBook() {
     try {
@@ -31,8 +28,8 @@ function BookProperty() {
           firstName: formData.firstName,
           lastName: formData.lastName,
           email: formData.email,
-          contact: formData.contact,
-          propertyId: formData.propertyId,
+          contact: parseInt(formData.contact),
+          propertyId: parseInt(formData.propertyId),
           scheduleDate: formData.scheduleDate,
           scheduleTime: formData.scheduleTime,
           customerMessage: formData.customerMessage,
@@ -41,20 +38,53 @@ function BookProperty() {
 
       const result = await response.json();
 
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        contact: '',
-        propertyId: '',
-        scheduleDate: '',
-        scheduleTime: '',
-        customerMessage: '',
-      });
+      if (response.status === 400 && result.errors) {
+        setErrors(result.errors);
+      } else {
+        setFormData(initialFormData);
+        setErrors({});
+      }
     } catch (error) {
       console.error('Error booking schedule', error.message);
     }
   }
+
+  const handleChange = async (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+    setErrors((prevErrors) => ({ ...prevErrors, [name]: '' }));
+  };
+
+  const handleBlur = async (e) => {
+    const { name, value } = e.target;
+
+    if (value.trim() === '') {
+      try {
+        const response = await fetch('http://localhost:3000/book', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            [name]: value,
+          }),
+        });
+
+        const result = await response.json();
+
+        if (result.errors && result.errors[name]) {
+          setErrors((prevErrors) => ({
+            ...prevErrors,
+            [name]: result.errors[name],
+          }));
+        } else {
+          setErrors((prevErrors) => ({ ...prevErrors, [name]: '' }));
+        }
+      } catch (error) {
+        console.error('Error validating field', error.message);
+      }
+    }
+  };
 
   return (
     <>
@@ -72,7 +102,11 @@ function BookProperty() {
               value={formData.firstName}
               placeholder="First Name*"
               onChange={handleChange}
+              onBlur={handleBlur}
             />
+            {errors.firstName && (
+              <span className={styles.error}>{errors.firstName}</span>
+            )}
             <input
               className={styles.inputLastName}
               type="text"
@@ -80,7 +114,11 @@ function BookProperty() {
               value={formData.lastName}
               placeholder="Last Name*"
               onChange={handleChange}
+              onBlur={handleBlur}
             />
+            {errors.lastName && (
+              <span className={styles.error}>{errors.lastName}</span>
+            )}
             <input
               className={styles.inputEmail}
               type="text"
@@ -88,7 +126,11 @@ function BookProperty() {
               value={formData.email}
               placeholder="Email Address*"
               onChange={handleChange}
+              onBlur={handleBlur}
             />
+            {errors.email && (
+              <span className={styles.error}>{errors.email}</span>
+            )}
             <input
               className={styles.inputNumber}
               type="text"
@@ -97,7 +139,11 @@ function BookProperty() {
               placeholder="Contact Number*"
               maxLength={11}
               onChange={handleChange}
+              onBlur={handleBlur}
             />
+            {errors.contact && (
+              <span className={styles.error}>{errors.contact}</span>
+            )}
             <input
               className={styles.inputId}
               type="text"
@@ -105,39 +151,47 @@ function BookProperty() {
               value={formData.propertyId}
               placeholder="Property ID*"
               onChange={handleChange}
+              onBlur={handleBlur}
             />
-            {/* <select className={styles.select}>
-              <option selected disabled>
-                Preferred Location
-              </option>
-              <option value="antipolo">Antipolo</option>
-              <option value="batangas">Batangas</option>
-              <option value="bulacan">Bulacan</option>
-            </select> */}
+            {errors.propertyId && (
+              <span className={styles.error}>{errors.propertyId}</span>
+            )}
             <span className={styles.chooseText}>
               Choose your preferred schedule:
             </span>
             <div className={styles.dateContainer}>
-              <input
-                className={styles.inputDate}
-                type="date"
-                name="scheduleDate"
-                value={formData.scheduleDate}
-                onChange={handleChange}
-              />
-              <input
-                className={styles.inputTime}
-                type="time"
-                name="scheduleTime"
-                value={formData.scheduleTime}
-                onChange={handleChange}
-              />
+              <div className={styles.date}>
+                <input
+                  className={styles.inputDate}
+                  type="date"
+                  name="scheduleDate"
+                  value={formData.scheduleDate}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+                {errors.scheduleDate && (
+                  <span className={styles.error}>{errors.scheduleDate}</span>
+                )}
+              </div>
+              <div className={styles.time}>
+                <input
+                  className={styles.inputTime}
+                  type="time"
+                  name="scheduleTime"
+                  value={formData.scheduleTime}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+                {errors.scheduleTime && (
+                  <span className={styles.error}>{errors.scheduleTime}</span>
+                )}
+              </div>
             </div>
             <textarea
               className={styles.message}
               cols="10"
               rows="10"
-              name="message"
+              name="customerMessage"
               value={formData.customerMessage}
               placeholder="Message (optional)"
               onChange={handleChange}

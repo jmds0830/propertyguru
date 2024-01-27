@@ -139,6 +139,11 @@
   margin-bottom: 150px;
 }
 
+.viewPropertiesText > h2 {
+  font-size: 28px;
+  line-height: 1.2;
+}
+
 .interiorImage {
   height: 400px;
   width: 740px;
@@ -155,4 +160,8 @@
 .searchButton:hover {
   cursor: pointer;
   background-color: rgb(252, 208, 84);
+}
+
+.searchButton:active {
+  background-color: whitesmoke;
 }

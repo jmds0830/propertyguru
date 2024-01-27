@@ -80,3 +80,7 @@
   cursor: pointer;
   background-color: rgb(252, 208, 84);
 }
+
+.sendMessageButton:active {
+  background-color: whitesmoke;
+}
