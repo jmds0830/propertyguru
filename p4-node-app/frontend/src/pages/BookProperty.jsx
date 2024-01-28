@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Layout from './Layout';
 import styles from '../styles/BookProperty.module.css';
+import toast, { Toaster } from 'react-hot-toast';
 
 function BookProperty() {
   const initialFormData = {
@@ -18,7 +19,6 @@ function BookProperty() {
 
   async function handleBook() {
     try {
-      console.log(formData);
       const response = await fetch('http://localhost:3000/book', {
         method: 'POST',
         headers: {
@@ -43,6 +43,7 @@ function BookProperty() {
       } else {
         setFormData(initialFormData);
         setErrors({});
+        toast.success('Schedule successfully booked!');
       }
     } catch (error) {
       console.error('Error booking schedule', error.message);
@@ -81,7 +82,7 @@ function BookProperty() {
           setErrors((prevErrors) => ({ ...prevErrors, [name]: '' }));
         }
       } catch (error) {
-        console.error('Error validating field', error.message);
+        console.error(error.message);
       }
     }
   };

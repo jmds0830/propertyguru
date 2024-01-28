@@ -1,19 +1,17 @@
 import { Schema, model } from 'mongoose';
 
-const bookingSchema = new Schema(
+const messageSchema = new Schema(
   {
     firstName: String,
     lastName: String,
     email: String,
     contact: Number,
-    propertyId: Number,
-    scheduleDate: String,
-    scheduleTime: String,
+    customerType: String,
     customerMessage: String,
   },
   { timestamps: true }
 );
 
-const Booking = model('Booking', bookingSchema);
+const Message = model('Message', messageSchema);
 
-export default Booking;
+export default Message;

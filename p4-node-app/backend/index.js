@@ -3,8 +3,11 @@ import process from 'node:process';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import Property from './models/PropertyModel.js';
+import Message from './models/MessageModel.js';
 import Booking from './models/BookPropertyModel.js';
 import searchQuery from './utils/searchQuery.js';
+import validatePropertyMiddleware from './middlewares/validatePropertyMiddleware.js';
+import validateMessageMiddleware from './middlewares/validateMessageMiddleware.js';
 import validateBookingMiddleware from './middlewares/validateBookingMiddleware.js';
 import cors from 'cors';
 
@@ -19,104 +22,84 @@ app.use(cors());
 app.use(express.static('static'));
 app.use(express.json());
 
-app.post('/property', async (req, res) => {
-  const {
-    propertyId,
-    title,
-    images,
-    price,
-    area,
-    type,
-    status,
-    location,
-    lotArea,
-    floorArea,
-    bedrooms,
-    bathrooms,
-    carpark,
-    features,
-    neighborhoodFeatures,
-    parksGreenery,
-    grocery,
-    school,
-    mallStore,
-    hospital,
-  } = req.body;
+app.post('/property', validatePropertyMiddleware, async (req, res) => {
+  try {
+    const {
+      propertyId,
+      title,
+      images,
+      price,
+      area,
+      type,
+      status,
+      location,
+      lotArea,
+      floorArea,
+      bedrooms,
+      bathrooms,
+      carpark,
+      features,
+      neighborhoodFeatures,
+      parksGreenery,
+      grocery,
+      school,
+      mallStore,
+      hospital,
+      timestamps,
+    } = req.body;
 
-  const newProperty = new Property({
-    propertyId,
-    title,
-    images,
-    price: priceToNumber,
-    area,
-    type,
-    status,
-    location,
-    lotArea,
-    floorArea,
-    bedrooms,
-    bathrooms,
-    carpark,
-    features,
-    neighborhoodFeatures,
-    parksGreenery,
-    grocery,
-    school,
-    mallStore,
-    hospital,
-  });
-
-  const existingPropertyId = await Property.findOne({ propertyId });
-
-  if (existingPropertyId) {
-    res.status(400).json({
-      message: 'Property ID already exists',
+    const newProperty = new Property({
+      propertyId,
+      title,
+      images,
+      price,
+      area,
+      type,
+      status,
+      location,
+      lotArea,
+      floorArea,
+      bedrooms,
+      bathrooms,
+      carpark,
+      features,
+      neighborhoodFeatures,
+      parksGreenery,
+      grocery,
+      school,
+      mallStore,
+      hospital,
+      timestamps,
     });
 
-    return;
-  }
+    const existingPropertyId = await Property.findOne({ propertyId });
 
-  if (
-    !propertyId ||
-    !title ||
-    !images ||
-    !price ||
-    !area ||
-    !type ||
-    !uploadedOn ||
-    !status ||
-    !location ||
-    !lotArea ||
-    !floorArea ||
-    !bedrooms ||
-    !bathrooms ||
-    !carpark ||
-    !features ||
-    !neighborhoodFeatures
-  ) {
-    res.status(400).json({
-      message: 'Must input all necessary fields',
+    if (existingPropertyId) {
+      res.status(400).json({
+        message: 'Property ID already exists',
+      });
+
+      return;
+    }
+
+    await newProperty.save();
+
+    res.status(201).json({
+      message: 'SUCCESS! New property added',
+      data: newProperty,
     });
-
-    return;
+  } catch (error) {
+    res.status(400).json({
+      message: 'Error! Property not found',
+      error: error.message,
+    });
   }
-
-  await newProperty.save();
-
-  res.status(201).json({
-    message: 'SUCCESS! New property added',
-    data: newProperty,
-  });
 });
 
 app.get('/properties', async (req, res) => {
-  // const { limit, offset } = req.query;
-
   try {
     const query = searchQuery(req.query);
     const result = await Property.find(query);
-    // .limit(parseInt(limit))
-    // .skip(parseInt(offset));
 
     res.send(result);
   } catch (error) {
@@ -174,6 +157,7 @@ app.patch('/property/:id', async (req, res) => {
       school,
       mallStore,
       hospital,
+      timestamps,
     } = req.body;
 
     property.propertyId = propertyId || property.propertyId;
@@ -196,6 +180,7 @@ app.patch('/property/:id', async (req, res) => {
     property.school = school || property.school;
     property.mallStore = mallStore || property.mallStore;
     property.hospital = hospital || property.hospital;
+    timestamps;
 
     await property.save();
 
@@ -228,13 +213,42 @@ app.delete('/property/:id', async (req, res) => {
     await Property.deleteOne({ propertyId: Number(req.params.id) });
 
     res.status(200).json({
-      message: "Property deleted successfully'",
+      message: 'Property deleted',
     });
   } catch (error) {
     res.status(400).json({
       message: 'ERROR! Property not found',
     });
   }
+});
+
+app.post('/contact', validateMessageMiddleware, async (req, res) => {
+  const {
+    firstName,
+    lastName,
+    email,
+    contact,
+    customerType,
+    customerMessage,
+    timestamps,
+  } = req.body;
+
+  const newMessage = new Message({
+    firstName,
+    lastName,
+    email,
+    contact,
+    customerType,
+    customerMessage,
+    timestamps,
+  });
+
+  await newMessage.save();
+
+  res.status(200).json({
+    message: 'SUCCESS! New message added',
+    newMessage,
+  });
 });
 
 app.post('/book', validateBookingMiddleware, async (req, res) => {
@@ -247,6 +261,7 @@ app.post('/book', validateBookingMiddleware, async (req, res) => {
     scheduleDate,
     scheduleTime,
     customerMessage,
+    timestamps,
   } = req.body;
 
   const newBooking = new Booking({
@@ -258,6 +273,7 @@ app.post('/book', validateBookingMiddleware, async (req, res) => {
     scheduleDate,
     scheduleTime,
     customerMessage,
+    timestamps,
   });
 
   await newBooking.save();

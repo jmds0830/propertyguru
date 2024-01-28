@@ -1,7 +1,87 @@
+import { useState } from 'react';
 import Layout from './Layout';
 import styles from '../styles/ContactPage.module.css';
 
 function ContactPage() {
+  const initialContactData = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    contact: '',
+    customerType: '',
+    customerMessage: '',
+  };
+
+  const [contactData, setContactData] = useState(initialContactData);
+  const [errors, setErrors] = useState({});
+
+  async function handleSubmit() {
+    try {
+      const response = await fetch('http://localhost:3000/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firstName: contactData.firstName,
+          lastName: contactData.lastName,
+          email: contactData.email,
+          contact: parseInt(contactData.contact),
+          customerType: contactData.customerType,
+          customerMessage: contactData.customerMessage,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (response.status === 400 && result.errors) {
+        setErrors(result.errors);
+      } else {
+        setContactData(initialContactData);
+        setErrors({});
+      }
+    } catch (error) {
+      console.error('Error submitting form', error.message);
+    }
+  }
+
+  const handleChange = async (e) => {
+    const { name, value } = e.target;
+    setContactData((prevData) => ({ ...prevData, [name]: value }));
+    setErrors((prevErrors) => ({ ...prevErrors, [name]: '' }));
+  };
+
+  const handleBlur = async (e) => {
+    const { name, value } = e.target;
+
+    if (value.trim() === '') {
+      try {
+        const response = await fetch('http://localhost:3000/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            [name]: value,
+          }),
+        });
+
+        const result = await response.json();
+
+        if (result.errors && result.errors[name]) {
+          setErrors((prevErrors) => ({
+            ...prevErrors,
+            [name]: result.errors[name],
+          }));
+        } else {
+          setErrors((prevErrors) => ({ ...prevErrors, [name]: '' }));
+        }
+      } catch (error) {
+        console.log(error.message);
+      }
+    }
+  };
+
   return (
     <>
       <Layout>
@@ -25,30 +105,62 @@ function ContactPage() {
               Fill-out the contact form below and we will get in touch with you.
             </p>
           </div>
-
           <div className={styles.inputContainer}>
             <h3>CONTACT FORM</h3>
             <input
               className={styles.inputFirstName}
               type="text"
+              name="firstName"
+              value={contactData.firstName}
               placeholder="First Name*"
+              onChange={handleChange}
+              onBlur={handleBlur}
             />
+            {errors.firstName && (
+              <span className={styles.error}>{errors.firstName}</span>
+            )}
             <input
               className={styles.inputLastName}
               type="text"
+              name="lastName"
+              value={contactData.lastName}
               placeholder="Last Name*"
+              onChange={handleChange}
+              onBlur={handleBlur}
             />
+            {errors.lastName && (
+              <span className={styles.error}>{errors.lastName}</span>
+            )}
             <input
               className={styles.inputEmail}
               type="text"
+              name="email"
+              value={contactData.email}
               placeholder="Email Address*"
+              onChange={handleChange}
+              onBlur={handleBlur}
             />
+            {errors.email && (
+              <span className={styles.error}>{errors.email}</span>
+            )}
             <input
               className={styles.inputNumber}
               type="text"
+              name="contact"
+              value={contactData.contact}
               placeholder="Contact Number*"
+              onChange={handleChange}
+              onBlur={handleBlur}
             />
-            <select className={styles.select}>
+            {errors.contact && (
+              <span className={styles.error}>{errors.contact}</span>
+            )}
+            <select
+              className={styles.select}
+              name="customerType"
+              value={contactData.customerType}
+              onChange={handleChange}
+            >
               <option value="buyer">Property Buyer</option>
               <option value="seller">Property Seller</option>
             </select>
@@ -56,10 +168,21 @@ function ContactPage() {
               className={styles.message}
               cols="10"
               rows="10"
-              placeholder="Message (optional)"
+              name="customerMessage"
+              value={contactData.customerMessage}
+              placeholder="Message* (required)"
+              onChange={handleChange}
+              onBlur={handleBlur}
             ></textarea>
+            {errors.customerMessage && (
+              <span className={styles.error}>{errors.customerMessage}</span>
+            )}
             <div className={styles.buttonContainer}>
-              <input type="submit" className={styles.sendMessageButton} />
+              <input
+                type="submit"
+                className={styles.sendMessageButton}
+                onClick={() => handleSubmit()}
+              />
             </div>
           </div>
         </div>
