@@ -8,6 +8,7 @@ function validateMessageMiddleware(req, res, next) {
         lastName: 'Last name is required',
         email: 'Email is required',
         contact: 'Contact number is required',
+        customerType: 'Choose a customer type',
         customerMessage: 'Message is required',
       },
     });

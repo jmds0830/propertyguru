@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Layout from './Layout';
 import styles from '../styles/BookProperty.module.css';
-import toast, { Toaster } from 'react-hot-toast';
 
 function BookProperty() {
   const initialFormData = {
@@ -37,13 +36,41 @@ function BookProperty() {
       });
 
       const result = await response.json();
+      const updatedErrors = {};
 
-      if (response.status === 400 && result.errors) {
-        setErrors(result.errors);
-      } else {
+      if (formData.firstName === '' && result.errors.firstName) {
+        updatedErrors.firstName = result.errors.firstName;
+      }
+
+      if (formData.lastName === '' && result.errors.lastName) {
+        updatedErrors.lastName = result.errors.lastName;
+      }
+
+      if (formData.email === '' && result.errors.email) {
+        updatedErrors.email = result.errors.email;
+      }
+
+      if (formData.contact === '' && result.errors.contact) {
+        updatedErrors.contact = result.errors.contact;
+      }
+
+      if (formData.propertyId === '' && result.errors.propertyId) {
+        updatedErrors.propertyId = result.errors.propertyId;
+      }
+
+      if (formData.scheduleDate === '' && result.errors.scheduleDate) {
+        updatedErrors.scheduleDate = result.errors.scheduleDate;
+      }
+
+      if (formData.scheduleTime === '' && result.errors.scheduleTime) {
+        updatedErrors.scheduleTime = result.errors.scheduleTime;
+      }
+
+      setErrors(updatedErrors);
+
+      if (Object.keys(updatedErrors).length === 0) {
         setFormData(initialFormData);
-        setErrors({});
-        toast.success('Schedule successfully booked!');
+        notify();
       }
     } catch (error) {
       console.error('Error booking schedule', error.message);

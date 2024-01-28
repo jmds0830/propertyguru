@@ -33,12 +33,36 @@ function ContactPage() {
       });
 
       const result = await response.json();
+      const updatedErrors = {};
 
-      if (response.status === 400 && result.errors) {
-        setErrors(result.errors);
-      } else {
+      if (contactData.firstName === '' && result.errors.firstName) {
+        updatedErrors.firstName = result.errors.firstName;
+      }
+
+      if (contactData.lastName === '' && result.errors.lastName) {
+        updatedErrors.lastName = result.errors.lastName;
+      }
+
+      if (contactData.email === '' && result.errors.email) {
+        updatedErrors.email = result.errors.email;
+      }
+
+      if (contactData.contact === '' && result.errors.contact) {
+        updatedErrors.contact = result.errors.contact;
+      }
+
+      if (contactData.customerType === '' && result.errors.customerType) {
+        updatedErrors.customerType = result.errors.customerType;
+      }
+
+      if (contactData.customerMessage === '' && result.errors.customerMessage) {
+        updatedErrors.customerMessage = result.errors.customerMessage;
+      }
+
+      setErrors(updatedErrors);
+
+      if (Object.keys(updatedErrors).length === 0) {
         setContactData(initialContactData);
-        setErrors({});
       }
     } catch (error) {
       console.error('Error submitting form', error.message);
@@ -161,9 +185,15 @@ function ContactPage() {
               value={contactData.customerType}
               onChange={handleChange}
             >
-              <option value="buyer">Property Buyer</option>
-              <option value="seller">Property Seller</option>
+              <option value="" selected disabled>
+                Customer Type
+              </option>
+              <option value="Buyer">Property Buyer</option>
+              <option value="Seller">Property Seller</option>
             </select>
+            {errors.customerType && (
+              <span className={styles.error}>{errors.customerType}</span>
+            )}
             <textarea
               className={styles.message}
               cols="10"
