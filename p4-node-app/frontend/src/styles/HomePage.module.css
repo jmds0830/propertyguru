@@ -129,8 +129,6 @@
 
 .viewProperties {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
   gap: 50px;
   align-items: center;
   max-width: 1200px;

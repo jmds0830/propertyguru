@@ -2,13 +2,16 @@ import express from 'express';
 import process from 'node:process';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
+import Featured from './models/FeaturedModel.js';
 import Property from './models/PropertyModel.js';
 import Message from './models/MessageModel.js';
 import Booking from './models/BookPropertyModel.js';
+import Subscription from './models/SubscriptionModel.js';
 import searchQuery from './utils/searchQuery.js';
 import validatePropertyMiddleware from './middlewares/validatePropertyMiddleware.js';
 import validateMessageMiddleware from './middlewares/validateMessageMiddleware.js';
 import validateBookingMiddleware from './middlewares/validateBookingMiddleware.js';
+import validateSubscriptionMiddleware from './middlewares/validateSubscriptionMiddleware.js';
 import cors from 'cors';
 
 const app = express();
@@ -21,6 +24,91 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static('static'));
 app.use(express.json());
+
+app.post('/featured', validatePropertyMiddleware, async (req, res) => {
+  try {
+    const {
+      propertyId,
+      title,
+      images,
+      price,
+      area,
+      type,
+      status,
+      location,
+      lotArea,
+      floorArea,
+      bedrooms,
+      bathrooms,
+      carpark,
+      features,
+      neighborhoodFeatures,
+      parksGreenery,
+      grocery,
+      school,
+      mallStore,
+      hospital,
+      timestamps,
+    } = req.body;
+
+    const newFeatured = new Featured({
+      propertyId,
+      title,
+      images,
+      price,
+      area,
+      type,
+      status,
+      location,
+      lotArea,
+      floorArea,
+      bedrooms,
+      bathrooms,
+      carpark,
+      features,
+      neighborhoodFeatures,
+      parksGreenery,
+      grocery,
+      school,
+      mallStore,
+      hospital,
+      timestamps,
+    });
+
+    const existingPropertyId = await Featured.findOne({ propertyId });
+
+    if (existingPropertyId) {
+      res.status(400).json({
+        message: 'Property ID already exists',
+      });
+      return;
+    }
+
+    await newFeatured.save();
+
+    res.status(201).json({
+      message: 'SUCCESS! New property added',
+      data: newFeatured,
+    });
+  } catch (error) {
+    res.status(400).json({
+      message: 'Error! Property not found',
+      error: error.message,
+    });
+  }
+});
+
+app.get('/featured', async (req, res) => {
+  try {
+    const result = await Featured.find();
+    res.send(result);
+  } catch (error) {
+    res.status(400).json({
+      message: 'Error loading properties',
+      error: error.message,
+    });
+  }
+});
 
 app.post('/property', validatePropertyMiddleware, async (req, res) => {
   try {
@@ -78,7 +166,6 @@ app.post('/property', validatePropertyMiddleware, async (req, res) => {
       res.status(400).json({
         message: 'Property ID already exists',
       });
-
       return;
     }
 
@@ -100,7 +187,6 @@ app.get('/properties', async (req, res) => {
   try {
     const query = searchQuery(req.query);
     const result = await Property.find(query);
-
     res.send(result);
   } catch (error) {
     res.status(400).json({
@@ -113,7 +199,6 @@ app.get('/properties', async (req, res) => {
 app.get('/property/:id', async (req, res) => {
   try {
     const property = await Property.find({ propertyId: req.params.id });
-
     res.status(200).json({
       property,
     });
@@ -133,7 +218,6 @@ app.patch('/property/:id', async (req, res) => {
       res.status(404).json({
         message: 'ERROR! Property not found ',
       });
-
       return;
     }
 
@@ -206,6 +290,7 @@ app.delete('/property/:id', async (req, res) => {
       res.status(404).json({
         message: 'ERROR! Property not found',
       });
+      return;
     }
 
     properties.splice(propertyIndex, 1);
@@ -223,65 +308,101 @@ app.delete('/property/:id', async (req, res) => {
 });
 
 app.post('/contact', validateMessageMiddleware, async (req, res) => {
-  const {
-    firstName,
-    lastName,
-    email,
-    contact,
-    customerType,
-    customerMessage,
-    timestamps,
-  } = req.body;
+  try {
+    const {
+      firstName,
+      lastName,
+      email,
+      contact,
+      customerType,
+      customerMessage,
+      timestamps,
+    } = req.body;
 
-  const newMessage = new Message({
-    firstName,
-    lastName,
-    email,
-    contact,
-    customerType,
-    customerMessage,
-    timestamps,
-  });
+    const newMessage = new Message({
+      firstName,
+      lastName,
+      email,
+      contact,
+      customerType,
+      customerMessage,
+      timestamps,
+    });
 
-  await newMessage.save();
+    await newMessage.save();
 
-  res.status(200).json({
-    message: 'SUCCESS! New message added',
-    newMessage,
-  });
+    res.status(200).json({
+      message: 'SUCCESS! New message added',
+      newMessage,
+    });
+  } catch (error) {
+    res.status(400).json({
+      message: 'Error sending message',
+      error: error.message,
+    });
+  }
 });
 
 app.post('/book', validateBookingMiddleware, async (req, res) => {
-  const {
-    firstName,
-    lastName,
-    email,
-    contact,
-    propertyId,
-    scheduleDate,
-    scheduleTime,
-    customerMessage,
-    timestamps,
-  } = req.body;
+  try {
+    const {
+      firstName,
+      lastName,
+      email,
+      contact,
+      propertyId,
+      scheduleDate,
+      scheduleTime,
+      customerMessage,
+    } = req.body;
 
-  const newBooking = new Booking({
-    firstName,
-    lastName,
-    email,
-    contact,
-    propertyId,
-    scheduleDate,
-    scheduleTime,
-    customerMessage,
-    timestamps,
-  });
+    const newBooking = new Booking({
+      firstName,
+      lastName,
+      email,
+      contact,
+      propertyId,
+      scheduleDate,
+      scheduleTime,
+      customerMessage,
+    });
 
-  await newBooking.save();
+    await newBooking.save();
 
-  res.status(201).json({
-    message: 'SUCCESS! New booking added',
-    newBooking,
-  });
+    res.status(201).json({
+      message: 'SUCCESS! New booking added',
+      newBooking,
+    });
+  } catch (error) {
+    res.status(400).json({
+      message: 'Error booking schedule',
+      error: error.message,
+    });
+  }
+});
+
+app.post('/subscribe', validateSubscriptionMiddleware, async (req, res) => {
+  try {
+    const { firstName, lastName, email, contact } = req.body;
+    const newSubscription = new Subscription({
+      firstName,
+      lastName,
+      email,
+      contact,
+    });
+
+    await newSubscription.save();
+
+    res.status(201).json({
+      message: 'SUCCESS! New subscription added',
+      newSubscription,
+    });
+  } catch (error) {
+    res.status(400).json({
+      message: 'Error subscribing to newsletter',
+      error: error.message,
+    });
+  }
 });
 
 app.listen(PORT, () => {

@@ -70,7 +70,7 @@ function BookProperty() {
 
       if (Object.keys(updatedErrors).length === 0) {
         setFormData(initialFormData);
-        notify();
+        alert('Success! Your form was submitted successfully.');
       }
     } catch (error) {
       console.error('Error booking schedule', error.message);

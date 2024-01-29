@@ -29,6 +29,7 @@
   height: 30px;
   width: 490px;
   font-size: 15px;
+  margin-inline: auto;
   margin-bottom: 20px;
   padding-left: 10px;
 }

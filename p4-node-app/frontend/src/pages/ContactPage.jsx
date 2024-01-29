@@ -63,6 +63,7 @@ function ContactPage() {
 
       if (Object.keys(updatedErrors).length === 0) {
         setContactData(initialContactData);
+        alert('Success! Your form was submitted successfully.');
       }
     } catch (error) {
       console.error('Error submitting form', error.message);

@@ -30,9 +30,9 @@ function validateBookingMiddleware(req, res, next) {
       },
     });
     return;
+  } else {
+    next();
   }
-
-  next();
 }
 
 export default validateBookingMiddleware;

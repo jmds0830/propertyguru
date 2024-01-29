@@ -8,7 +8,7 @@ function HomePage() {
 
   async function fetchData() {
     try {
-      const response = await fetch(`./src/data/featured.json`);
+      const response = await fetch('http://localhost:3000/featured');
       const result = await response.json();
 
       setData(result);
@@ -37,38 +37,33 @@ function HomePage() {
           {data.length === 0 ? (
             <h2>No Results Found</h2>
           ) : (
-            data.properties?.map((property) => (
+            data.map((property) => (
               <div key={property.id} className={styles.propertyContainer}>
                 <div className={styles.areaContainer}>
                   <img className={styles.locationIcon} src="/location.png" />
                   <span className={styles.area}>
-                    {property.info.location
-                      .split(' ')
-                      .slice(-1)[0]
-                      .toUpperCase()}
+                    {property.area.toUpperCase()}
                   </span>
                 </div>
-                <Link to={`/property/${property.id}`}>
+                <Link to={`/property/${property.propertyId}`}>
                   <img
                     className={styles.propertyImage}
-                    src={property.info.images[0]}
-                    alt={`Image for: ${property.id}`}
+                    src={property.images[0]}
+                    alt={`Image for: ${property.propertyId}`}
                   />
                 </Link>
                 <div className={styles.propertyDetails}>
                   <div className={styles.propertyId}>
-                    Property ID: {property.id}
+                    Property ID: {property.propertyId}
                   </div>
                   <div className={styles.propertyTitleContainer}>
-                    <Link to={`/property/${property.id}`}>
-                      <h3 className={styles.propertyTitle}>
-                        {property.info.title}
-                      </h3>
+                    <Link to={`/property/${property.propertyId}`}>
+                      <h3 className={styles.propertyTitle}>{property.title}</h3>
                     </Link>
                   </div>
                   <h2 className={styles.propertyPrice}>
                     <span className={styles.peso}>₱ </span>
-                    {property.info.price.toLocaleString()}
+                    {property.price.toLocaleString()}
                   </h2>
                   <div className={styles.dimensionsContainer}>
                     <div className={styles.dimensions}>
@@ -77,7 +72,7 @@ function HomePage() {
                         src="/bed.png"
                         alt="bedrooms"
                       />
-                      <p> {property.info.bedrooms}</p>
+                      <p> {property.bedrooms}</p>
                     </div>
                     <div className={styles.dimensions}>
                       <img
@@ -85,7 +80,7 @@ function HomePage() {
                         src="/shower.png"
                         alt="bathrooms"
                       />
-                      <p> {property.info.bathrooms}</p>
+                      <p> {property.bathrooms}</p>
                     </div>
                     <div className={styles.dimensions}>
                       <img
@@ -93,7 +88,7 @@ function HomePage() {
                         src="/floor-area.png"
                         alt="floor-area"
                       />
-                      <p> {property.info.floorArea}</p>
+                      <p> {property.floorArea}</p>
                     </div>
                     <div className={styles.dimensions}>
                       <img
@@ -101,12 +96,10 @@ function HomePage() {
                         src="/lot-area.png"
                         alt="lot-area"
                       />
-                      <p> {property.info.lotArea}</p>
+                      <p> {property.lotArea}</p>
                     </div>
                   </div>
-                  <h4 className={styles.propertyStatus}>
-                    {property.info.status}
-                  </h4>
+                  <h4 className={styles.propertyStatus}>{property.status}</h4>
                 </div>
               </div>
             ))
