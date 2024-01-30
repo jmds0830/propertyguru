@@ -65,6 +65,37 @@ function Contact() {
     setErrors((prevErrors) => ({ ...prevErrors, [name]: '' }));
   };
 
+  const handleBlur = async (e) => {
+    const { name, value } = e.target;
+
+    if (value.trim() === '') {
+      try {
+        const response = await fetch('http://localhost:3000/subscribe', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            [name]: value,
+          }),
+        });
+
+        const result = await response.json();
+
+        if (result.errors && result.errors[name]) {
+          setErrors((prevErrors) => ({
+            ...prevErrors,
+            [name]: result.errors[name],
+          }));
+        } else {
+          setErrors((prevErrors) => ({ ...prevErrors, [name]: '' }));
+        }
+      } catch (error) {
+        console.error(error.message);
+      }
+    }
+  };
+
   return (
     <>
       <div className={styles.contactBox}>
@@ -79,6 +110,7 @@ function Contact() {
               value={subscriptionData.firstName}
               placeholder="First Name*"
               onChange={handleChange}
+              onBlur={handleBlur}
             />
             {errors.firstName && (
               <span className={styles.error}>{errors.firstName}</span>
@@ -90,8 +122,9 @@ function Contact() {
               value={subscriptionData.lastName}
               placeholder="Last Name*"
               onChange={handleChange}
+              onBlur={handleBlur}
             />
-            {errors.lastNameName && (
+            {errors.lastName && (
               <span className={styles.error}>{errors.lastName}</span>
             )}
           </div>
@@ -103,6 +136,7 @@ function Contact() {
               value={subscriptionData.email}
               placeholder="Email Address*"
               onChange={handleChange}
+              onBlur={handleBlur}
             />
             {errors.email && (
               <span className={styles.error}>{errors.email}</span>
@@ -115,18 +149,19 @@ function Contact() {
               name="contact"
               value={subscriptionData.contact}
               placeholder="Contact Number*"
+              maxLength={11}
               onChange={handleChange}
+              onBlur={handleBlur}
             />
             {errors.contact && (
               <span className={styles.error}>{errors.contact}</span>
             )}
           </div>
-          <button
+          <input
+            type="submit"
             className={styles.subscribeButton}
             onClick={() => handleSubmit()}
-          >
-            SUBSCRIBE
-          </button>
+          />
         </div>
         <div className={styles.line}></div>
       </div>
