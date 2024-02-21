@@ -163,7 +163,6 @@ function Contact() {
             onClick={() => handleSubmit()}
           />
         </div>
-        <div className={styles.line}></div>
       </div>
     </>
   );

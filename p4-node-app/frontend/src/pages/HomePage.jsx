@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import Layout from './Layout';
 import styles from '../styles/HomePage.module.css';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function HomePage() {
   const [data, setData] = useState([]);
+  const navigate = useNavigate();
 
   async function fetchData() {
     try {
@@ -21,14 +22,24 @@ function HomePage() {
     fetchData();
   }, []);
 
+  const handleNavigateToProperties = () => {
+    navigate('/properties');
+  };
+
+  const handleNavigateToPropertyId = (propertyId) => {
+    navigate(`/property/${propertyId}`);
+  };
+
   return (
     <>
       <Layout>
         <img className={styles.coverPhoto} src="/cover2.jpg" alt="Cover" />
         <div className={styles.title}>
-          <h1>YOUR SPACE.</h1>
-          <h1>YOUR PLACE.</h1>
-          <h1>YOUR HOME.</h1>
+          <img
+            className={styles.tagline}
+            src={'/tagline.png'}
+            alt="YOUR SPACE. YOUR PLACE. YOUR HOME."
+          />
         </div>
         <div className={styles.featuredTitle}>
           <h1>FEATURED PROPERTIES</h1>
@@ -45,21 +56,27 @@ function HomePage() {
                     {property.area.toUpperCase()}
                   </span>
                 </div>
-                <Link to={`/property/${property.propertyId}`}>
-                  <img
-                    className={styles.propertyImage}
-                    src={property.images[0]}
-                    alt={`Image for: ${property.propertyId}`}
-                  />
-                </Link>
+                <img
+                  className={styles.propertyImage}
+                  src={property.images[0]}
+                  alt={`Image for: ${property.propertyId}`}
+                  onClick={() =>
+                    handleNavigateToPropertyId(property.propertyId)
+                  }
+                />
                 <div className={styles.propertyDetails}>
                   <div className={styles.propertyId}>
                     Property ID: {property.propertyId}
                   </div>
                   <div className={styles.propertyTitleContainer}>
-                    <Link to={`/property/${property.propertyId}`}>
-                      <h3 className={styles.propertyTitle}>{property.title}</h3>
-                    </Link>
+                    <h3
+                      className={styles.propertyTitle}
+                      onClick={() =>
+                        handleNavigateToPropertyId(property.propertyId)
+                      }
+                    >
+                      {property.title}
+                    </h3>
                   </div>
                   <h2 className={styles.propertyPrice}>
                     <span className={styles.peso}>₱ </span>
@@ -106,21 +123,20 @@ function HomePage() {
           )}
         </div>
         <div className={styles.viewProperties}>
-          <div>
-            <img
-              className={styles.interiorImage}
-              src="/interior.png"
-              alt="Interior"
-            />
-          </div>
+          <img
+            className={styles.interiorImage}
+            src="/interior.png"
+            alt="Interior"
+          />
           <div className={styles.viewPropertiesText}>
-            <h2>FIND YOUR PERFECT HOME WITH US.</h2>
-            <p>Browse through our listings of properties for sale.</p>
-            <Link to={'/properties'}>
-              <button className={styles.searchButton}>
-                <p>VIEW PROPERTIES</p>
-              </button>
-            </Link>
+            <h2>FIND YOUR PERFECT HOME WITH US 🏠</h2>
+            <p>Browse through our listings of quality properties for sale.</p>
+            <button
+              className={styles.searchButton}
+              onClick={handleNavigateToProperties}
+            >
+              VIEW PROPERTIES
+            </button>
           </div>
         </div>
       </Layout>

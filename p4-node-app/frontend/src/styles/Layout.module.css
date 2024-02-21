@@ -19,12 +19,12 @@
 
 .topFacebook,
 .topInstagram {
-  height: 15px;
+  height: 13px;
   padding-right: 15px;
 }
 
 .topX {
-  height: 13px;
+  height: 11px;
   padding-right: 15px;
 }
 
@@ -64,7 +64,21 @@ a:visited {
   text-decoration: none;
 }
 
+.home,
+.title {
+  color: white;
+}
+
+.home:hover {
+  cursor: pointer;
+}
+
 a:hover {
+  color: rgb(252, 208, 84);
+}
+
+.title:hover {
+  cursor: pointer;
   color: rgb(252, 208, 84);
 }
 
@@ -90,7 +104,7 @@ a:hover {
 .footer {
   color: whitesmoke;
   background-color: rgb(7, 7, 7);
-  margin-top: 150px;
+  margin-top: 120px;
 }
 
 .socialContainer {

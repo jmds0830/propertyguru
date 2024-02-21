@@ -14,7 +14,7 @@
   max-width: 500px;
   margin-inline: auto;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 10px;
 }
 
 .contactContainer > h2 {
@@ -60,11 +60,6 @@
 
 .subscribeButton:active {
   background-color: whitesmoke;
-}
-
-.line {
-  background-color: rgb(76, 76, 76);
-  height: 0.5px;
 }
 
 .error {

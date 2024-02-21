@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import Layout from './Layout';
-import { Link } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import styles from '../styles/PropertyInfoPage.module.css';
 
 function PropertyInfoPage() {
   const [propertyData, setPropertyData] = useState([]);
   const [currentImage, setCurrentImage] = useState(0);
   const { id } = useParams();
+  const navigate = useNavigate();
 
   async function fetchPropertyData() {
     try {
@@ -36,8 +36,9 @@ function PropertyInfoPage() {
     fetchPropertyData();
   }, [id]);
 
-  console.log('propertyId:', id);
-  console.log(propertyData);
+  const handleNavigateToBook = () => {
+    navigate('/book');
+  };
 
   return (
     <>
@@ -50,7 +51,7 @@ function PropertyInfoPage() {
                 <span className={styles.peso}>₱ </span>
                 {property.price?.toLocaleString()}
               </h1>
-              <h3>{property.status}</h3>
+              <h3 className={styles.propertyStatus}>{property.status}</h3>
               <hr />
               <div className={styles.propertyImageContainer}>
                 <img
@@ -75,21 +76,28 @@ function PropertyInfoPage() {
                   </div>
                 )}
               </div>
-              {/* <div className={styles.propertyImageIndex}>
-                {propertyData.info?.images.map((image, index) => (
-                  <span key={index}>{index + 1}</span>
+              <div className={styles.propertyImageIndex}>
+                {property.images?.map((image, index) => (
+                  <div
+                    key={index}
+                    className={`${styles.circle} ${
+                      index === currentImage ? styles.active : ''
+                    }`}
+                    onClick={() => setCurrentImage(index)}
+                  ></div>
                 ))}
-              </div> */}
+              </div>
               <div className={styles.bookProperty}>
                 <p>
                   Interested in this property? Schedule a visit and talk to one
                   of our real estate agents.
                 </p>
-                <Link to="/book">
-                  <button className={styles.bookButton}>
-                    <h3>BOOK A VIEWING</h3>
-                  </button>
-                </Link>
+                <button
+                  className={styles.bookButton}
+                  onClick={handleNavigateToBook}
+                >
+                  <h3>BOOK A VIEWING</h3>
+                </button>
               </div>
               <div className={styles.propertyInfo}>
                 <h3>Property ID: {property.propertyId}</h3>

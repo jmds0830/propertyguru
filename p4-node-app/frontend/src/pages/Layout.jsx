@@ -1,8 +1,26 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styles from '../styles/Layout.module.css';
 import Contact from '../components/Contact';
 
 function Layout({ children }) {
+  const navigate = useNavigate();
+
+  const handleNavigateToHome = () => {
+    navigate('/');
+  };
+
+  const handleNavigateToProperties = () => {
+    navigate('/properties');
+  };
+
+  const handleNavigateToContact = () => {
+    navigate('/contact');
+  };
+
+  const handleNavigateToBook = () => {
+    navigate('/book');
+  };
+
   return (
     <>
       <div className={styles.topInfoContainer}>
@@ -12,11 +30,9 @@ function Layout({ children }) {
             src="/facebook.png"
             alt="facebook"
           />
-
           <p>
             <Link>Like us on Facebook</Link>
           </p>
-
           <img
             className={styles.topInstagram}
             src="/instagram.png"
@@ -33,28 +49,31 @@ function Layout({ children }) {
       </div>
       <header className={styles.header}>
         <div className={styles.navbar}>
-          <Link to="/">
-            <h2>PropertyGuru</h2>
-          </Link>
+          <h2 className={styles.home} onClick={handleNavigateToHome}>
+            PropertyGuru
+          </h2>
           <div className={styles.navbarMenu}>
-            <p className={styles.link}>
-              <Link to="/">HOME</Link>
+            <p className={styles.title} onClick={handleNavigateToHome}>
+              HOME
             </p>
-            <p className={styles.link}>
-              <Link to="/properties">PROPERTIES</Link>
+            <p className={styles.title} onClick={handleNavigateToProperties}>
+              PROPERTIES
             </p>
-            <p className={styles.link}>
-              <Link to="/contact">CONTACT US</Link>
+            <p className={styles.title} onClick={handleNavigateToContact}>
+              CONTACT US
             </p>
           </div>
-          <Link to="/book">
-            <button className={styles.bookButton}>BOOK A VIEWING</button>
-          </Link>
+          <div>
+            <button
+              className={styles.bookButton}
+              onClick={handleNavigateToBook}
+            >
+              BOOK A VIEWING
+            </button>
+          </div>
         </div>
       </header>
-
       <main className={styles.main}>{children}</main>
-
       <footer className={styles.footer}>
         <Contact />
         <div className={styles.socialContainer}>
