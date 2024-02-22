@@ -1,0 +1,42 @@
+.viewPropertiesBox {
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 120px;
+  margin-bottom: 150px;
+  padding-inline: 20px;
+}
+
+.viewProperties {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  box-shadow: 0 0 1px 1px rgb(212, 212, 212);
+}
+
+.viewPropertiesText > h2 {
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.interiorImage {
+  height: 360px;
+  width: 850px;
+  object-fit: cover;
+}
+
+.searchButton {
+  width: 180px;
+  border: solid 1px;
+  margin-top: 10px;
+  font-size: 15px;
+  padding-block: 10px;
+}
+
+.searchButton:hover {
+  cursor: pointer;
+  background-color: rgb(252, 208, 84);
+}
+
+.searchButton:active {
+  background-color: whitesmoke;
+}

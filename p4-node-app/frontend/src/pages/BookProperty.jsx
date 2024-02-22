@@ -18,6 +18,10 @@ function BookProperty() {
 
   async function handleBook() {
     try {
+      if (errors.email && errors.email === 'Invalid email format') {
+        return;
+      }
+
       const response = await fetch('http://localhost:3000/book', {
         method: 'POST',
         headers: {
@@ -48,6 +52,10 @@ function BookProperty() {
 
       if (formData.email === '' && result.errors.email) {
         updatedErrors.email = result.errors.email;
+      }
+
+      if (errors.email === 'Invalid email format') {
+        updatedErrors.email = errors.email;
       }
 
       if (formData.contact === '' && result.errors.contact) {
@@ -111,6 +119,13 @@ function BookProperty() {
       } catch (error) {
         console.error(error.message);
       }
+    } else if (name === 'email' && !/\S+@\S+\.\S+/.test(value)) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        [name]: 'Invalid email format',
+      }));
+    } else {
+      setErrors((prevErrors) => ({ ...prevErrors, [name]: '' }));
     }
   };
 
@@ -165,9 +180,30 @@ function BookProperty() {
               name="contact"
               value={formData.contact}
               placeholder="Contact Number*"
-              maxLength={11}
+              maxLength="11"
               onChange={handleChange}
               onBlur={handleBlur}
+              onKeyDown={(e) => {
+                const allowedKeys = [
+                  '0',
+                  '1',
+                  '2',
+                  '3',
+                  '4',
+                  '5',
+                  '6',
+                  '7',
+                  '8',
+                  '9',
+                  'Backspace',
+                  'Delete',
+                  'ArrowLeft',
+                  'ArrowRight',
+                ];
+                if (!allowedKeys.includes(e.key)) {
+                  e.preventDefault();
+                }
+              }}
             />
             {errors.contact && (
               <span className={styles.error}>{errors.contact}</span>

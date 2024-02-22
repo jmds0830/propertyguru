@@ -11,7 +11,7 @@
   margin-inline: auto;
   margin-block: 100px;
   text-align: justify;
-  border: solid 1px;
+  border: solid 1px gray;
 }
 
 .inputContainer {
@@ -91,7 +91,7 @@
 
 .sendMessageButton {
   height: 35px;
-  width: 220px;
+  width: 150px;
   font-size: 15px;
   border: solid 1px;
 }

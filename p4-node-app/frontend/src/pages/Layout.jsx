@@ -53,13 +53,28 @@ function Layout({ children }) {
             PropertyGuru
           </h2>
           <div className={styles.navbarMenu}>
-            <p className={styles.title} onClick={handleNavigateToHome}>
+            <p
+              className={`${styles.title} ${
+                location.pathname === '/' && styles.active
+              }`}
+              onClick={handleNavigateToHome}
+            >
               HOME
             </p>
-            <p className={styles.title} onClick={handleNavigateToProperties}>
+            <p
+              className={`${styles.title} ${
+                location.pathname === '/properties' && styles.active
+              }`}
+              onClick={handleNavigateToProperties}
+            >
               PROPERTIES
             </p>
-            <p className={styles.title} onClick={handleNavigateToContact}>
+            <p
+              className={`${styles.title} ${
+                location.pathname === '/contact' && styles.active
+              }`}
+              onClick={handleNavigateToContact}
+            >
               CONTACT US
             </p>
           </div>
@@ -96,6 +111,9 @@ function Layout({ children }) {
             <Link>
               <img className={styles.x} src="/x.png" alt="x" />
             </Link>
+          </div>
+          <div className={styles.footerText}>
+            designed and created by jm segismundo
           </div>
         </div>
       </footer>

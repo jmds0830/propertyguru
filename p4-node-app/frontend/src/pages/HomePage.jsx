@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Layout from './Layout';
 import styles from '../styles/HomePage.module.css';
 import { useNavigate } from 'react-router-dom';
+import ViewProperties from '../components/ViewProperties';
 
 function HomePage() {
   const [data, setData] = useState([]);
@@ -21,10 +22,6 @@ function HomePage() {
   useEffect(() => {
     fetchData();
   }, []);
-
-  const handleNavigateToProperties = () => {
-    navigate('/properties');
-  };
 
   const handleNavigateToPropertyId = (propertyId) => {
     navigate(`/property/${propertyId}`);
@@ -122,23 +119,7 @@ function HomePage() {
             ))
           )}
         </div>
-        <div className={styles.viewProperties}>
-          <img
-            className={styles.interiorImage}
-            src="/interior.png"
-            alt="Interior"
-          />
-          <div className={styles.viewPropertiesText}>
-            <h2>FIND YOUR PERFECT HOME WITH US 🏠</h2>
-            <p>Browse through our listings of quality properties for sale.</p>
-            <button
-              className={styles.searchButton}
-              onClick={handleNavigateToProperties}
-            >
-              VIEW PROPERTIES
-            </button>
-          </div>
-        </div>
+        <ViewProperties />
       </Layout>
     </>
   );

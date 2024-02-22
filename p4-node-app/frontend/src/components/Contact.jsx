@@ -52,7 +52,7 @@ function Contact() {
 
       if (Object.keys(updatedErrors).length === 0) {
         setSubscriptionData(initialSubscriptionData);
-        alert('Success! Your form was submitted successfully.');
+        alert('You have successfully subscribed to our newsletter.');
       }
     } catch (error) {
       console.error('Error submitting form', error.message);
@@ -149,9 +149,30 @@ function Contact() {
               name="contact"
               value={subscriptionData.contact}
               placeholder="Contact Number*"
-              maxLength={11}
+              maxLength="11"
               onChange={handleChange}
               onBlur={handleBlur}
+              onKeyDown={(e) => {
+                const allowedKeys = [
+                  '0',
+                  '1',
+                  '2',
+                  '3',
+                  '4',
+                  '5',
+                  '6',
+                  '7',
+                  '8',
+                  '9',
+                  'Backspace',
+                  'Delete',
+                  'ArrowLeft',
+                  'ArrowRight',
+                ];
+                if (!allowedKeys.includes(e.key)) {
+                  e.preventDefault();
+                }
+              }}
             />
             {errors.contact && (
               <span className={styles.error}>{errors.contact}</span>

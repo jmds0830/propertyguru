@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Layout from './Layout';
 import styles from '../styles/PropertiesPage.module.css';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Search from '../components/Search';
 
 function Properties() {
@@ -15,6 +15,7 @@ function Properties() {
   });
   const [searchClicked, setSearchClicked] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
+  const navigate = useNavigate();
   const itemsPerPage = 9;
 
   async function fetchData() {
@@ -29,6 +30,10 @@ function Properties() {
       console.error('Error fetching data', error.message);
     }
   }
+
+  const handleNavigateToPropertyId = (propertyId) => {
+    navigate(`/property/${propertyId}`);
+  };
 
   const handleChange = (e, field) => {
     setSearch({ ...search, [field]: e.target.value });
@@ -94,23 +99,25 @@ function Properties() {
                       {property.area.toUpperCase()}
                     </span>
                   </div>
-                  <Link to={`/property/${property.propertyId}`}>
-                    <img
-                      className={styles.propertyImage}
-                      src={property.images[0]}
-                      alt={`Image for: ${property.propertyId}`}
-                    />
-                  </Link>
+                  <img
+                    className={styles.propertyImage}
+                    src={property.images[0]}
+                    alt={`Image for: ${property.propertyId}`}
+                    onClick={() =>
+                      handleNavigateToPropertyId(property.propertyId)
+                    }
+                  />
                   <div className={styles.propertyDetails}>
                     <div className={styles.propertyId}>
                       Property ID: {property.propertyId}
                     </div>
-                    <div className={styles.propertyTitleContainer}>
-                      <Link to={`/property/${property.propertyId}`}>
-                        <h3 className={styles.propertyTitle}>
-                          {property.title}
-                        </h3>
-                      </Link>
+                    <div
+                      className={styles.propertyTitleContainer}
+                      onClick={() =>
+                        handleNavigateToPropertyId(property.propertyId)
+                      }
+                    >
+                      <h3 className={styles.propertyTitle}>{property.title}</h3>
                     </div>
                     <h2 className={styles.propertyPrice}>
                       <span className={styles.peso}>₱ </span>

@@ -130,3 +130,8 @@
 .activeButton {
   background-color: rgb(252, 208, 84);
 }
+
+.propertyImage:hover,
+.propertyTitleContainer:hover {
+  cursor: pointer;
+}
