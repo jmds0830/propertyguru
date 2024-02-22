@@ -1,0 +1,65 @@
+.featuredTitle {
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  margin-inline: auto;
+  margin-top: 60px;
+}
+
+.propertyBox {
+  display: grid;
+  justify-content: center;
+  margin: auto;
+  padding-top: 60px;
+  padding-inline: 20px;
+  max-width: 1200px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+}
+
+.propertyContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-height: 500px;
+  max-width: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+  box-shadow: 0 0 1px 1px rgb(212, 212, 212);
+  transition: box-shadow 0.5s ease;
+}
+
+.propertyContainer:hover {
+  box-shadow: 0 0 20px 1px rgb(212, 212, 212);
+}
+
+.propertyImage {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.description {
+  padding-inline: 20px;
+  text-align: center;
+}
+
+.viewPropertiesButton {
+  width: 180px;
+  border: solid 1px;
+  margin-top: 10px;
+  font-size: 15px;
+  padding-block: 10px;
+  margin-block: 30px;
+}
+
+.viewPropertiesButton:hover {
+  cursor: pointer;
+  background-color: rgb(252, 208, 84);
+}
+
+.viewPropertiesButton:active {
+  background-color: whitesmoke;
+}

@@ -75,7 +75,7 @@ function Layout({ children }) {
               }`}
               onClick={handleNavigateToContact}
             >
-              CONTACT US
+              CONTACT
             </p>
           </div>
           <div>

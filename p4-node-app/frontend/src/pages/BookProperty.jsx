@@ -132,6 +132,7 @@ function BookProperty() {
   return (
     <>
       <Layout>
+        <img className={styles.coverPhoto} src="/cover2.jpg" alt="Cover" />
         <div className={styles.bookContainer}>
           <div className={styles.title}>
             <h1>SCHEDULE A</h1>

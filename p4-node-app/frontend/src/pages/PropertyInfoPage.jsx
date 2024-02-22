@@ -96,7 +96,7 @@ function PropertyInfoPage() {
                   className={styles.bookButton}
                   onClick={handleNavigateToBook}
                 >
-                  <h3>BOOK A VIEWING</h3>
+                  BOOK A VIEWING
                 </button>
               </div>
               <div className={styles.propertyInfo}>

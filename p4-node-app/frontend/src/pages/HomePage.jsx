@@ -3,6 +3,7 @@ import Layout from './Layout';
 import styles from '../styles/HomePage.module.css';
 import { useNavigate } from 'react-router-dom';
 import ViewProperties from '../components/ViewProperties';
+import PropertyLocations from '../components/PropertyLocations';
 
 function HomePage() {
   const [data, setData] = useState([]);
@@ -46,7 +47,10 @@ function HomePage() {
             <h2>No Results Found</h2>
           ) : (
             data.map((property) => (
-              <div key={property.id} className={styles.propertyContainer}>
+              <div
+                key={property.propertyId}
+                className={styles.propertyContainer}
+              >
                 <div className={styles.areaContainer}>
                   <img className={styles.locationIcon} src="/location.png" />
                   <span className={styles.area}>
@@ -119,6 +123,7 @@ function HomePage() {
             ))
           )}
         </div>
+        <PropertyLocations />
         <ViewProperties />
       </Layout>
     </>

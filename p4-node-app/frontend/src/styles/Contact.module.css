@@ -51,11 +51,14 @@
   font-size: 15px;
   border: solid 1px;
   margin-top: 10px;
+  background-color: rgb(7, 7, 7);
+  color: white;
 }
 
 .subscribeButton:hover {
   cursor: pointer;
   background-color: rgb(252, 208, 84);
+  color: black;
 }
 
 .subscribeButton:active {

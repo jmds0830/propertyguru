@@ -88,11 +88,14 @@ a:hover {
   height: 30px;
   width: 150px;
   border: solid 1px;
+  background-color: rgb(7, 7, 7);
+  color: white;
 }
 
 .bookButton:hover {
   cursor: pointer;
   background-color: rgb(252, 208, 84);
+  color: black;
 }
 
 .bookButton:active {
@@ -155,6 +158,6 @@ a:hover {
 }
 
 .footerText {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   font-size: 13px;
 }

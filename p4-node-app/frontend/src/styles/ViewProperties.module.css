@@ -11,6 +11,8 @@
   align-items: center;
   gap: 50px;
   box-shadow: 0 0 1px 1px rgb(212, 212, 212);
+  background-color: rgb(7, 7, 7);
+  color: white;
 }
 
 .viewPropertiesText > h2 {
@@ -22,6 +24,8 @@
   height: 360px;
   width: 850px;
   object-fit: cover;
+  position: relative;
+  transition: left 1s ease-in-out;
 }
 
 .searchButton {
@@ -30,11 +34,14 @@
   margin-top: 10px;
   font-size: 15px;
   padding-block: 10px;
+  background-color: rgb(7, 7, 7);
+  color: white;
 }
 
 .searchButton:hover {
   cursor: pointer;
   background-color: rgb(252, 208, 84);
+  color: black;
 }
 
 .searchButton:active {

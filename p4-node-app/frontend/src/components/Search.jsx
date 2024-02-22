@@ -1,6 +1,20 @@
+import { useState, useEffect } from 'react';
 import styles from '../styles/Search.module.css';
 
-function Search({ search, handleChange, handleClear, handleSearch }) {
+function Search({ search, handleChange, handleClear, handleSearch, location }) {
+  const [initialLocation, setInitialLocation] = useState('');
+
+  useEffect(() => {
+    if (location && location.state && location.state.propertyArea) {
+      setInitialLocation(location.state.propertyArea);
+    }
+  }, [location]);
+
+  useEffect(() => {
+    if (initialLocation) {
+      handleSearch();
+    }
+  }, [initialLocation]);
   return (
     <>
       <div className={styles.searchMenuContainer}>

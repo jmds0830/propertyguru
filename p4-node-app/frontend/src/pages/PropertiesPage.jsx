@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Layout from './Layout';
 import styles from '../styles/PropertiesPage.module.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Search from '../components/Search';
 
 function Properties() {
@@ -16,7 +16,14 @@ function Properties() {
   const [searchClicked, setSearchClicked] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const navigate = useNavigate();
+  const location = useLocation();
   const itemsPerPage = 9;
+
+  useEffect(() => {
+    if (location.state) {
+      setSearch({ ...search, propertyArea: location.state.propertyArea });
+    }
+  }, [location.state]);
 
   async function fetchData() {
     try {
@@ -61,7 +68,7 @@ function Properties() {
       setCurrentPage(1);
       setSearchClicked(true);
     }
-  }, [searchClicked, search, currentPage]);
+  }, [searchClicked]);
 
   const indexOfLast = currentPage * itemsPerPage;
   const indexOfFirst = indexOfLast - itemsPerPage;
@@ -76,6 +83,7 @@ function Properties() {
         <div className={styles.propertiesBox}>
           <Search
             search={search}
+            location={location}
             handleChange={handleChange}
             handleClear={handleClear}
             handleSearch={handleSearch}
