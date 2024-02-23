@@ -134,11 +134,13 @@ function BookProperty() {
       <Layout>
         <img className={styles.coverPhoto} src="/cover2.jpg" alt="Cover" />
         <div className={styles.bookContainer}>
-          <div className={styles.title}>
-            <h1>SCHEDULE A</h1>
-            <h1>PROPERTY VIEWING</h1>
-          </div>
           <div className={styles.inputContainer}>
+            <div className={styles.title}>
+              <h1>
+                SCHEDULE A <br />
+                PROPERTY VIEWING
+              </h1>
+            </div>
             <input
               className={styles.inputFirstName}
               type="text"
@@ -235,7 +237,9 @@ function BookProperty() {
                   onBlur={handleBlur}
                 />
                 {errors.scheduleDate && (
-                  <span className={styles.error}>{errors.scheduleDate}</span>
+                  <span className={styles.errorDate}>
+                    {errors.scheduleDate}
+                  </span>
                 )}
               </div>
               <div className={styles.time}>
@@ -248,7 +252,9 @@ function BookProperty() {
                   onBlur={handleBlur}
                 />
                 {errors.scheduleTime && (
-                  <span className={styles.error}>{errors.scheduleTime}</span>
+                  <span className={styles.errorTime}>
+                    {errors.scheduleTime}
+                  </span>
                 )}
               </div>
             </div>

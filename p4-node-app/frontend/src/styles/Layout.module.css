@@ -92,13 +92,15 @@ a:hover {
   color: white;
 }
 
-.bookButton:hover {
+.bookButton:hover,
+.menuButton:hover {
   cursor: pointer;
   background-color: rgb(252, 208, 84);
   color: black;
 }
 
-.bookButton:active {
+.bookButton:active,
+.menuButton:active {
   background-color: whitesmoke;
 }
 
@@ -130,8 +132,7 @@ a:hover {
 }
 
 .facebook,
-.instagram,
-.phone {
+.instagram {
   height: 25px;
   padding-inline: 10px;
   margin-bottom: 50px;
@@ -162,9 +163,88 @@ a:hover {
   font-size: 13px;
 }
 
+.hamburger {
+  display: none;
+  height: 20px;
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.line {
+  width: 100%;
+  height: 1.5px;
+  background-color: white;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.open:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.open:nth-child(2) {
+  opacity: 0;
+}
+
+.open:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.responsiveMenu {
+  position: absolute;
+  top: 100%;
+  height: max-content;
+  width: 100%;
+  background-color: rgb(7, 7, 7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.responsiveMenu p {
+  color: white;
+  cursor: pointer;
+}
+
+.menuButton {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  height: 30px;
+  width: 150px;
+  border: solid 1px;
+  background-color: rgb(7, 7, 7);
+  color: white;
+}
+
+/* MOBILE VIEW */
+
+@media only screen and (max-width: 699px) {
+  .topInfo,
+  .navbarMenu,
+  .bookButton {
+    display: none;
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .line {
+    margin: 5px 0;
+  }
+}
+
 /* TABLET VIEW */
 
-@media only screen and (min-width: 700px) and (max-width: 900px) {
+@media only screen and (min-width: 650px) and (max-width: 900px) {
   .navbarMenu {
     zoom: 85%;
   }

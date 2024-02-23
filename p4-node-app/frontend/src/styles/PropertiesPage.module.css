@@ -136,7 +136,25 @@
   cursor: pointer;
 }
 
-@media only screen and (min-width: 700px) and (max-width: 900px) {
+/* MOBILE VIEW */
+
+@media only screen and (max-width: 649px) {
+  .coverPhoto {
+    height: 150px;
+  }
+
+  .propertyBox {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
+
+  .propertyContainer {
+    max-width: 100%;
+  }
+}
+
+/* TABLET VIEW */
+
+@media only screen and (min-width: 650px) and (max-width: 900px) {
   .coverPhoto {
     height: 200px;
   }

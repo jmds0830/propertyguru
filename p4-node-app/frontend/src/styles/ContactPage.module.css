@@ -27,14 +27,15 @@
 .inputContainer {
   display: flex;
   flex-direction: column;
-  max-width: 650px;
-  padding-inline: 70px;
+  width: 100%;
   padding-block: 50px;
   border: solid 1px gray;
+  margin-inline: 20px;
 }
 
 .inputContainer > h3 {
   padding-bottom: 20px;
+  margin-inline: 80px;
 }
 
 .inputFirstName,
@@ -42,10 +43,10 @@
 .inputEmail,
 .inputNumber {
   height: 30px;
-  width: 490px;
   font-size: 15px;
   margin-bottom: 20px;
   padding-left: 10px;
+  margin-inline: 80px;
 }
 
 .error {
@@ -53,6 +54,8 @@
   margin-bottom: 5px;
   color: red;
   font-size: 14px;
+  text-align: left;
+  margin-inline: 80px;
 }
 
 .select {
@@ -61,21 +64,22 @@
   padding-inline: 10px;
   font-size: 15px;
   margin-bottom: 20px;
+  margin-inline: 80px;
 }
 
 .message {
-  width: 490px;
   font-size: 16px;
   padding-top: 10px;
   padding-left: 10px;
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 20px;
+  margin-inline: 80px;
 }
 
 .buttonContainer {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .sendMessageButton {
@@ -94,9 +98,61 @@
   background-color: whitesmoke;
 }
 
+/* MOBILE VIEW */
+
+@media only screen and (max-width: 320px) {
+  .coverPhoto {
+    height: 150px;
+  }
+
+  .contactTitle {
+    zoom: 80%;
+  }
+
+  .inputContainer {
+    border: none;
+  }
+
+  .inputContainer > h3,
+  .inputFirstName,
+  .inputLastName,
+  .inputEmail,
+  .inputNumber,
+  .select,
+  .error,
+  .message {
+    margin-inline: 0px;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 649px) {
+  .coverPhoto {
+    height: 150px;
+  }
+
+  .contactTitle {
+    zoom: 80%;
+  }
+
+  /* .inputContainer {
+    border: none;
+  } */
+
+  .inputContainer > h3,
+  .inputFirstName,
+  .inputLastName,
+  .inputEmail,
+  .inputNumber,
+  .select,
+  .error,
+  .message {
+    margin-inline: 20px;
+  }
+}
+
 /* TABLET VIEW */
 
-@media only screen and (min-width: 700px) and (max-width: 900px) {
+@media only screen and (min-width: 650px) and (max-width: 900px) {
   .coverPhoto {
     height: 200px;
   }

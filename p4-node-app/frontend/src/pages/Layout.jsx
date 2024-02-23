@@ -1,24 +1,15 @@
 import { Link, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import styles from '../styles/Layout.module.css';
 import Contact from '../components/Contact';
 
 function Layout({ children }) {
   const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleNavigateToHome = () => {
-    navigate('/');
-  };
-
-  const handleNavigateToProperties = () => {
-    navigate('/properties');
-  };
-
-  const handleNavigateToContact = () => {
-    navigate('/contact');
-  };
-
-  const handleNavigateToBook = () => {
-    navigate('/book');
+  const handleNavigate = (path) => {
+    navigate(path);
+    setMenuOpen(false);
   };
 
   return (
@@ -31,7 +22,7 @@ function Layout({ children }) {
             alt="facebook"
           />
           <p>
-            <Link>Like us on Facebook</Link>
+            <Link className={styles.topLink}>Like us on Facebook</Link>
           </p>
           <img
             className={styles.topInstagram}
@@ -39,17 +30,17 @@ function Layout({ children }) {
             alt="instagram"
           />
           <p>
-            <Link>Follow us on Instagram</Link>
+            <Link className={styles.topLink}>Follow us on Instagram</Link>
           </p>
           <img className={styles.topX} src="/x.png" alt="x" />
           <p>
-            <Link>Follow us on X</Link>
+            <Link className={styles.topLink}>Follow us on X</Link>
           </p>
         </div>
       </div>
       <header className={styles.header}>
         <div className={styles.navbar}>
-          <h2 className={styles.home} onClick={handleNavigateToHome}>
+          <h2 className={styles.home} onClick={() => handleNavigate('/')}>
             PropertyGuru
           </h2>
           <div className={styles.navbarMenu}>
@@ -57,7 +48,7 @@ function Layout({ children }) {
               className={`${styles.title} ${
                 location.pathname === '/' && styles.active
               }`}
-              onClick={handleNavigateToHome}
+              onClick={() => handleNavigate('/')}
             >
               HOME
             </p>
@@ -65,7 +56,7 @@ function Layout({ children }) {
               className={`${styles.title} ${
                 location.pathname === '/properties' && styles.active
               }`}
-              onClick={handleNavigateToProperties}
+              onClick={() => handleNavigate('/properties')}
             >
               PROPERTIES
             </p>
@@ -73,7 +64,7 @@ function Layout({ children }) {
               className={`${styles.title} ${
                 location.pathname === '/contact' && styles.active
               }`}
-              onClick={handleNavigateToContact}
+              onClick={() => handleNavigate('/contact')}
             >
               CONTACT
             </p>
@@ -81,12 +72,54 @@ function Layout({ children }) {
           <div>
             <button
               className={styles.bookButton}
-              onClick={handleNavigateToBook}
+              onClick={() => handleNavigate('/book')}
             >
               BOOK A VIEWING
             </button>
           </div>
         </div>
+        <div
+          className={styles.hamburger}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <div className={`${styles.line} ${menuOpen && styles.open}`}></div>
+          <div className={`${styles.line} ${menuOpen && styles.open}`}></div>
+          <div className={`${styles.line} ${menuOpen && styles.open}`}></div>
+        </div>
+        {menuOpen && (
+          <div className={styles.responsiveMenu}>
+            <p
+              className={`${styles.title} ${
+                location.pathname === '/' && styles.active
+              }`}
+              onClick={() => handleNavigate('/')}
+            >
+              HOME
+            </p>
+            <p
+              className={`${styles.title} ${
+                location.pathname === '/properties' && styles.active
+              }`}
+              onClick={() => handleNavigate('/properties')}
+            >
+              PROPERTIES
+            </p>
+            <p
+              className={`${styles.title} ${
+                location.pathname === '/contact' && styles.active
+              }`}
+              onClick={() => handleNavigate('/contact')}
+            >
+              CONTACT
+            </p>
+            <button
+              className={styles.menuButton}
+              onClick={() => handleNavigate('/book')}
+            >
+              BOOK A VIEWING
+            </button>
+          </div>
+        )}
       </header>
       <main className={styles.main}>{children}</main>
       <footer className={styles.footer}>
