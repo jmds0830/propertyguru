@@ -10,17 +10,19 @@ function PropertyLocations() {
   return (
     <>
       <div className={styles.featuredTitle}>
-        <h1>POPULAR LOCATIONS</h1>
+        <h1>FEATURED LOCATIONS</h1>
       </div>
       <div className={styles.propertyBox}>
         <div className={styles.propertyContainer}>
           <img className={styles.propertyImage} src={'/antipolo.png'} />
           <h3>ANTIPOLO</h3>
           <div className={styles.description}>
-            Located in the scenic Rizal province, Antipolo sits on elevated
-            topography with a temperate climate and natural surroundings that
-            allow a tranquil lifestyle while still being close to many schools
-            and business centers.
+            <span>
+              Located in Rizal province, Antipolo sits on elevated topography
+              with a temperate climate and natural surroundings that offer a
+              serene lifestyle while still being close to many schools and
+              business centers.
+            </span>
           </div>
           <button
             className={styles.viewPropertiesButton}
@@ -33,9 +35,12 @@ function PropertyLocations() {
           <img className={styles.propertyImage} src={'/batangas.png'} />
           <h3>BATANGAS</h3>
           <div className={styles.description}>
-            Hailed as one of the most popular tourist destinations at the south
-            of Metro Manila, Batangas boasts of being home to numerous
-            historical landmarks, business centers, and quality schools.
+            <span>
+              Located to the south of Metro Manila, Batangas presents a seamless
+              fusion of natural splendor, rich heritage, and modern amenities,
+              featuring many historical sites, commercial hubs, and reputable
+              schools.
+            </span>
           </div>
           <button
             className={styles.viewPropertiesButton}
@@ -48,10 +53,12 @@ function PropertyLocations() {
           <img className={styles.propertyImage} src={'/bulacan.png'} />
           <h3>BULACAN</h3>
           <div className={styles.description}>
-            Nestled in the heart of Central Luzon, this "Gateway to the Northern
-            Philippines" offers a refuge to families who want to enjoy a
-            suburban lifestyle while still being near the bustling metropolis of
-            Metro Manila.
+            <span>
+              Nestled in the heart of Central Luzon region, this "Gateway to the
+              Northern Philippines" offers a haven for families seeking a
+              suburban lifestyle while still being near the bustling metropolis
+              of Metro Manila.
+            </span>
           </div>
           <button
             className={styles.viewPropertiesButton}

@@ -14,9 +14,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 700px;
+  max-width: 650px;
   margin: auto;
   text-align: justify;
+  padding-inline: 20px;
 }
 
 .contactText {
@@ -26,8 +27,8 @@
 .inputContainer {
   display: flex;
   flex-direction: column;
-  max-width: 700px;
-  padding-inline: 100px;
+  max-width: 650px;
+  padding-inline: 70px;
   padding-block: 50px;
   border: solid 1px gray;
 }
@@ -91,4 +92,12 @@
 
 .sendMessageButton:active {
   background-color: whitesmoke;
+}
+
+/* TABLET VIEW */
+
+@media only screen and (min-width: 700px) and (max-width: 900px) {
+  .coverPhoto {
+    height: 200px;
+  }
 }

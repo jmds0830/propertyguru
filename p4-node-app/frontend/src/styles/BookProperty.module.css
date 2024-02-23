@@ -13,7 +13,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 700px;
+  max-width: 650px;
   margin-inline: auto;
   margin-block: 100px;
   text-align: justify;
@@ -109,4 +109,12 @@
 
 .sendMessageButton:active {
   background-color: whitesmoke;
+}
+
+/* TABLET VIEW */
+
+@media only screen and (min-width: 768px) and (max-width: 900px) {
+  .coverPhoto {
+    height: 200px;
+  }
 }

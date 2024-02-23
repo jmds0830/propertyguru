@@ -15,6 +15,10 @@
   color: white;
 }
 
+.viewPropertiesText {
+  padding-right: 30px;
+}
+
 .viewPropertiesText > h2 {
   font-size: 28px;
   line-height: 1.2;
@@ -22,7 +26,7 @@
 
 .interiorImage {
   height: 360px;
-  width: 850px;
+  width: 800px;
   object-fit: cover;
   position: relative;
   transition: left 1s ease-in-out;
@@ -46,4 +50,20 @@
 
 .searchButton:active {
   background-color: whitesmoke;
+}
+
+/* TABLET VIEW */
+
+@media only screen and (min-width: 700px) and (max-width: 900px) {
+  .viewProperties {
+    flex-direction: column;
+  }
+
+  .interiorImage {
+    width: 100%;
+  }
+
+  .searchButton {
+    margin-bottom: 50px;
+  }
 }

@@ -61,9 +61,11 @@
 .bookProperty {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  gap: 50px;
   margin-top: 30px;
-  padding: 20px;
-  border: solid 1px gray;
+  padding: 10px;
 }
 
 .propertyInfo {
@@ -109,7 +111,12 @@
 
 .additionalInfoContainer {
   display: flex;
-  gap: 300px;
+  justify-content: space-between;
+  gap: 150px;
+  border: solid 1px gray;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  padding-inline: 100px;
 }
 
 .additionalInfo {
@@ -137,4 +144,12 @@
 
 .active {
   background-color: black;
+}
+
+/* TABLET VIEW */
+
+@media only screen and (min-width: 768px) and (max-width: 900px) {
+  .additionalInfoContainer {
+    padding-inline: 50px;
+  }
 }

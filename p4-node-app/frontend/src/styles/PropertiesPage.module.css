@@ -15,7 +15,7 @@
   justify-content: center;
   margin: auto;
   max-width: 1200px;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
   grid-gap: 30px;
 }
 
@@ -134,4 +134,18 @@
 .propertyImage:hover,
 .propertyTitleContainer:hover {
   cursor: pointer;
+}
+
+@media only screen and (min-width: 700px) and (max-width: 900px) {
+  .coverPhoto {
+    height: 200px;
+  }
+
+  .propertyBox {
+    grid-gap: 20px;
+  }
+
+  .dimensionsContainer {
+    zoom: 80%;
+  }
 }

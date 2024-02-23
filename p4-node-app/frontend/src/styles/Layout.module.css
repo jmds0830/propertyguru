@@ -161,3 +161,11 @@ a:hover {
   margin-bottom: 20px;
   font-size: 13px;
 }
+
+/* TABLET VIEW */
+
+@media only screen and (min-width: 700px) and (max-width: 900px) {
+  .navbarMenu {
+    zoom: 85%;
+  }
+}
