@@ -2,10 +2,11 @@
   max-width: 1200px;
   margin: auto;
   padding-inline: 20px;
+  margin-bottom: 150px;
 }
 
 .coverPhoto {
-  height: 300px;
+  max-height: 18rem;
   width: 100%;
   object-fit: cover;
 }
@@ -94,7 +95,7 @@
 
 .dimensionsContainer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -139,10 +140,6 @@
 /* MOBILE VIEW */
 
 @media only screen and (max-width: 649px) {
-  .coverPhoto {
-    height: 150px;
-  }
-
   .propertyBox {
     grid-template-columns: repeat(1, minmax(200px, 1fr));
   }
@@ -155,10 +152,6 @@
 /* TABLET VIEW */
 
 @media only screen and (min-width: 650px) and (max-width: 900px) {
-  .coverPhoto {
-    height: 200px;
-  }
-
   .propertyBox {
     grid-gap: 20px;
   }

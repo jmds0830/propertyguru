@@ -122,14 +122,14 @@ function ContactPage() {
     <>
       <Layout>
         <img className={styles.coverPhoto} src="/cover2.jpg" alt="Cover" />
-        <h1 className={styles.contactTitle}>CONTACT US</h1>
         <div className={styles.contactContainer}>
+          <h1 className={styles.contactTitle}>CONTACT US</h1>
           <div className={styles.contactText}>
             <p>
-              At PropertyGuru, we hold integrity and passion as the cornerstones
-              of our services. We aim to not only provide the best real estate
-              deals and services, but to also bring positive changes into each
-              home owner’s life.
+              At PropertyGuru, integrity and passion form the foundation of our
+              operations. We aim to not only provide the best real estate deals
+              and services, but to also bring positive changes into each home
+              owner’s life.
             </p>
             <p>
               Purchasing a home is a big life decision, and we're here to make
@@ -142,7 +142,6 @@ function ContactPage() {
             </p>
           </div>
           <div className={styles.inputContainer}>
-            <h3>CONTACT FORM</h3>
             <input
               className={styles.inputFirstName}
               type="text"

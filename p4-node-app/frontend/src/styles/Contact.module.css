@@ -3,7 +3,6 @@
   height: max-content;
   color: white;
   background-color: rgb(7, 7, 7);
-  margin-top: 80px;
 }
 
 .contactContainer {
@@ -71,9 +70,4 @@
   margin-bottom: 5px;
   color: red;
   font-size: 14px;
-}
-
-/* MOBILE VIEW */
-
-@media only screen and (max-width: 649px) {
 }

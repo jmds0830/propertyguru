@@ -79,7 +79,7 @@ function Properties() {
   return (
     <>
       <Layout>
-        <img className={styles.coverPhoto} src="/cover2.jpg" alt="Cover" />
+        <img className={styles.coverPhoto} src="/cover.jpg" alt="Cover" />
         <div className={styles.propertiesBox}>
           <Search
             search={search}

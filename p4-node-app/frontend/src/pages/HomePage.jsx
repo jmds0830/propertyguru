@@ -31,8 +31,8 @@ function HomePage() {
   return (
     <>
       <Layout>
-        <img className={styles.coverPhoto} src="/cover2.jpg" alt="Cover" />
-        <div className={styles.title}>
+        <div className={styles.titleContainer}>
+          <img className={styles.coverPhoto} src="/cover.jpg" alt="Cover" />
           <img
             className={styles.tagline}
             src={'/tagline.png'}

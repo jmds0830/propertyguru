@@ -1,23 +1,29 @@
 .coverPhoto {
-  height: 300px;
+  height: 2000px;
   width: 100%;
   object-fit: cover;
+  z-index: 0;
 }
 
 .contactTitle {
   text-align: center;
-  margin-top: 90px;
   margin-bottom: 50px;
 }
 
 .contactContainer {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 650px;
-  margin: auto;
+  margin-inline: auto;
   text-align: justify;
-  padding-inline: 20px;
+  padding: 30px;
+  border: solid 1px rgba(255, 255, 255, 0.5);
+  z-index: 0;
+  margin-top: -1900px;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 120px;
 }
 
 .contactText {
@@ -28,8 +34,6 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-block: 50px;
-  border: solid 1px gray;
   margin-inline: 20px;
 }
 
@@ -86,7 +90,7 @@
   height: 35px;
   width: 150px;
   font-size: 15px;
-  border: solid 1px;
+  border: solid 1px gray;
 }
 
 .sendMessageButton:hover {
@@ -101,10 +105,6 @@
 /* MOBILE VIEW */
 
 @media only screen and (max-width: 320px) {
-  .coverPhoto {
-    height: 150px;
-  }
-
   .contactTitle {
     zoom: 80%;
   }
@@ -125,18 +125,22 @@
   }
 }
 
-@media only screen and (min-width: 321px) and (max-width: 649px) {
+/* @media only screen and (max-width: 520px) {
   .coverPhoto {
-    height: 150px;
+    max-height: 8rem;
   }
+}
 
+@media only screen and (min-width: 520px) and (max-width: 650px) {
+  .coverPhoto {
+    max-height: 10rem;
+  }
+} */
+
+@media only screen and (min-width: 321px) and (max-width: 649px) {
   .contactTitle {
     zoom: 80%;
   }
-
-  /* .inputContainer {
-    border: none;
-  } */
 
   .inputContainer > h3,
   .inputFirstName,
@@ -153,7 +157,7 @@
 /* TABLET VIEW */
 
 @media only screen and (min-width: 650px) and (max-width: 900px) {
-  .coverPhoto {
-    height: 200px;
-  }
+  /* .coverPhoto {
+    max-height: 10rem;
+  } */
 }

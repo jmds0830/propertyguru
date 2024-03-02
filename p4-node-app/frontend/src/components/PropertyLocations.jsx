@@ -56,8 +56,8 @@ function PropertyLocations() {
             <span>
               Nestled in the heart of Central Luzon region, this "Gateway to the
               Northern Philippines" offers a haven for families seeking a
-              suburban lifestyle while still being near the bustling metropolis
-              of Metro Manila.
+              suburban lifestyle while still being accessible to the bustling
+              metropolis of Metro Manila.
             </span>
           </div>
           <button

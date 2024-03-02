@@ -1,23 +1,25 @@
+.titleContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .coverPhoto {
-  height: 300px;
+  max-height: 18rem;
   width: 100%;
   object-fit: cover;
 }
 
 .tagline {
-  height: fit-content;
-  max-width: 90%;
-  margin-top: -230px;
-}
-
-.title {
+  position: absolute;
   display: flex;
-  justify-content: center;
-  max-width: 1200px;
-  margin: auto;
-  font-size: 20px;
-  gap: 30px;
-  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: fit-content;
+  max-width: 900px;
 }
 
 .title > span {
@@ -131,7 +133,7 @@
 
 .dimensionsContainer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -149,23 +151,9 @@
 
 /* MOBILE VIEW */
 
-@media only screen and (max-width: 374px) {
+@media only screen and (max-width: 650px) {
   .tagline {
     max-width: 95%;
-    margin-top: -100px;
-  }
-}
-
-@media only screen and (min-width: 375px) and (max-width: 649px) {
-  .tagline {
-    max-width: 95%;
-    margin-top: -112px;
-  }
-}
-
-@media only screen and (max-width: 649px) {
-  .coverPhoto {
-    height: 150px;
   }
 
   .propertyBox {
@@ -183,18 +171,29 @@
 
 /* TABLET VIEW */
 
-@media only screen and (min-width: 650px) and (max-width: 900px) {
-  .coverPhoto {
-    height: 200px;
+@media only screen and (min-width: 650px) and (max-width: 768px) {
+  .tagline {
+    max-width: 90%;
   }
 
-  .tagline {
-    max-width: 100%;
-    margin-top: -160px;
+  .featuredTitle {
+    zoom: 90%;
   }
 
   .propertyBox {
     grid-gap: 20px;
+  }
+
+  .dimensionsContainer {
+    zoom: 80%;
+  }
+}
+
+/* DESKTOP VIEW */
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .tagline {
+    max-width: 90%;
   }
 
   .dimensionsContainer {

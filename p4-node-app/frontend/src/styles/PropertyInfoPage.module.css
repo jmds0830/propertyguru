@@ -4,6 +4,7 @@
   padding-inline: 20px;
   padding-top: 50px;
   position: relative;
+  margin-bottom: 150px;
 }
 
 .title {
@@ -73,7 +74,7 @@
 .bookButton {
   height: 50px;
   width: 180px;
-  border: solid 1px;
+  border: solid 1px gray;
   font-size: 14px;
 }
 
@@ -107,11 +108,11 @@
 .additionalInfoContainer {
   display: flex;
   justify-content: space-between;
-  gap: 150px;
+  gap: 50px;
   border: solid 1px gray;
   padding-top: 30px;
   padding-bottom: 50px;
-  padding-inline: 100px;
+  padding-inline: 50px;
 }
 
 .additionalInfo {
@@ -151,7 +152,9 @@
   }
 
   .propertyInfo {
-    zoom: 90%;
+    zoom: 95%;
+    align-items: start;
+    padding-inline: 20px;
   }
 
   .prev,
@@ -164,13 +167,15 @@
   .bookProperty,
   .propertyInfo {
     flex-direction: column;
-    text-align: center;
     gap: 0px;
+    padding-inline: 20px;
   }
 
   .dimensionsContainer {
     flex-direction: column;
-    zoom: 80%;
+    align-items: start;
+    zoom: 90%;
+    padding-inline: 20px;
   }
 
   .additionalInfoContainer {
@@ -182,8 +187,16 @@
 
 /* TABLET VIEW */
 
-@media only screen and (min-width: 768px) and (max-width: 900px) {
-  .additionalInfoContainer {
-    padding-inline: 50px;
+@media only screen and (min-width: 650px) and (max-width: 768px) {
+  .dimensionsContainer {
+    zoom: 80%;
+  }
+}
+
+/* DESKTOP VIEW */
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .dimensionsContainer {
+    zoom: 90%;
   }
 }
