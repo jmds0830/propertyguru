@@ -21,7 +21,7 @@ const PORT = process.env.PORT || 3000;
 await mongoose.connect(
   'mongodb+srv://jmdsegismundo:J5SztFREJkKbKyED@cluster0.en9wu33.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
   {
-    dbName: 'propertyguru',
+    dbName: 'p4-node-app',
   }
 );
 
