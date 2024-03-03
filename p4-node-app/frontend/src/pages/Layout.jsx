@@ -146,7 +146,7 @@ function Layout({ children }) {
             </Link>
           </div>
           <div className={styles.footerText}>
-            designed and created by jm segismundo
+            <p>created by jm segismundo</p>
           </div>
         </div>
       </footer>
