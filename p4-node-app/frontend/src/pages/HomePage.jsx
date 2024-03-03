@@ -12,7 +12,9 @@ function HomePage() {
 
   async function fetchData() {
     try {
-      const response = await fetch('http://localhost:3000/featured');
+      const response = await fetch(
+        'https://propertyguru-wtmh.onrender.com/featured'
+      );
       const result = await response.json();
 
       setData(result);

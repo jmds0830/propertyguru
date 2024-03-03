@@ -28,7 +28,7 @@ function Properties() {
   async function fetchData() {
     try {
       const response = await fetch(
-        `http://localhost:3000/properties?propertyId=${search.propertyId}&propertyArea=${search.propertyArea}&propertyType=${search.propertyType}&minPrice=${search.minPrice}&maxPrice=${search.maxPrice}`
+        `https://propertyguru-wtmh.onrender.com/properties?propertyId=${search.propertyId}&propertyArea=${search.propertyArea}&propertyType=${search.propertyType}&minPrice=${search.minPrice}&maxPrice=${search.maxPrice}`
       );
       const result = await response.json();
 
