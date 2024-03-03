@@ -18,9 +18,16 @@ import 'dotenv/config';
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-await mongoose.connect(process.env.DB_URL, {
-  dbName: process.env.DB_NAME,
-});
+await mongoose.connect(
+  'mongodb+srv://jmdsegismundo:J5SztFREJkKbKyED@cluster0.en9wu33.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
+  {
+    dbName: 'propertyguru',
+  }
+);
+
+// await mongoose.connect(process.env.DB_URL, {
+//   dbName: process.env.DB_NAME,
+// });
 
 app.set('port', PORT);
 app.use(bodyParser.json());
