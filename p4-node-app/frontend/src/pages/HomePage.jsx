@@ -25,10 +25,12 @@ function HomePage() {
 
   useEffect(() => {
     fetchData();
+    window.scrollTo(0, 0);
   }, []);
 
   const handleNavigateToPropertyId = (propertyId) => {
     navigate(`/property/${propertyId}`);
+    window.scrollTo(0, 0);
   };
 
   return (

@@ -40,6 +40,7 @@ function Properties() {
 
   const handleNavigateToPropertyId = (propertyId) => {
     navigate(`/property/${propertyId}`);
+    window.scrollTo(0, 0);
   };
 
   const handleChange = (e, field) => {

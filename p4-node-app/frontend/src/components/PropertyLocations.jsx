@@ -6,6 +6,7 @@ function PropertyLocations() {
 
   const handleNavigateToSearch = (location) => {
     navigate('/properties', { state: { propertyArea: location } });
+    window.scrollTo(0, 0);
   };
   return (
     <>

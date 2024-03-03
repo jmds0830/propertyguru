@@ -10,6 +10,7 @@ function Layout({ children }) {
   const handleNavigate = (path) => {
     navigate(path);
     setMenuOpen(false);
+    window.scrollTo(0, 0);
   };
 
   return (

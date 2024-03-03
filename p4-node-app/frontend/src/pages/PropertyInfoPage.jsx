@@ -36,10 +36,12 @@ function PropertyInfoPage() {
   };
   useEffect(() => {
     fetchPropertyData();
+    window.scrollTo(0, 0);
   }, [id]);
 
   const handleNavigateToBook = () => {
     navigate('/book');
+    window.scrollTo(0, 0);
   };
 
   const openImageInNewTab = (imageUrl) => {
