@@ -1,0 +1,61 @@
+.featuredTitle {
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  margin-inline: auto;
+  margin-top: 60px;
+  padding-inline: 20px;
+  line-height: 1;
+  text-align: center;
+}
+
+.reviewContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: auto;
+  padding-top: 40px;
+  padding-inline: 20px;
+  max-width: 1100px;
+  gap: 40px;
+  margin-bottom: 100px;
+}
+
+.reviewContainer h3 {
+  color: rgb(7, 7, 7);
+}
+
+.reviewText {
+  color: rgb(111, 111, 111);
+}
+
+/* MOBILE VIEW */
+
+@media only screen and (max-width: 650px) {
+  .featuredTitle {
+    zoom: 80%;
+  }
+
+  .reviewContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    gap: 20px;
+  }
+}
+
+/* TABLET VIEW */
+
+@media only screen and (min-width: 650px) and (max-width: 768px) {
+  .featuredTitle {
+    zoom: 90%;
+  }
+
+  .reviewContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    gap: 20px;
+  }
+}

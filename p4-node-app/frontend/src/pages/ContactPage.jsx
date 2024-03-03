@@ -138,6 +138,11 @@ function ContactPage() {
               advisors.
             </p>
             <p>
+              And if you are planning to sell your property, we are dedicated to
+              ensuring that bidding farewell to your old home is a stress-free
+              and seamless experience.
+            </p>
+            <p className={styles.text}>
               Fill-out the contact form below and we will get in touch with you.
             </p>
           </div>

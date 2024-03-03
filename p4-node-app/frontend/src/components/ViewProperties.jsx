@@ -35,7 +35,7 @@ function viewProperties() {
           />
           <div className={styles.viewPropertiesText}>
             <span>We are PropertyGuru.</span>
-            <h2>FIND YOUR PERFECT HOME WITH US 🏠</h2>
+            <h2>FIND YOUR PERFECT HOME WITH US.</h2>
             <p>Browse through our listings of properties for sale.</p>
             <button
               className={styles.searchButton}

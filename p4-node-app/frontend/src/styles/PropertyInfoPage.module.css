@@ -16,6 +16,12 @@
   padding-bottom: 10px;
 }
 
+.line {
+  height: 1px;
+  width: 100%;
+  background-color: rgb(7, 7, 7);
+}
+
 .propertyImageContainer {
   max-width: 1200px;
   margin: auto;
@@ -61,7 +67,10 @@
   text-align: center;
   gap: 50px;
   margin-top: 30px;
-  padding: 10px;
+  padding: 20px;
+  border: solid 1px;
+  color: white;
+  background-color: rgb(7, 7, 7);
 }
 
 .propertyInfo {
@@ -74,13 +83,17 @@
 .bookButton {
   height: 50px;
   width: 180px;
-  border: solid 1px gray;
+  border: solid 1px;
   font-size: 14px;
+  color: rgb(7, 7, 7);
+  background-color: rgb(252, 208, 84);
+  margin-block: 10px;
 }
 
 .bookButton:hover {
   cursor: pointer;
-  background-color: rgb(252, 208, 84);
+  color: white;
+  background-color: rgb(7, 7, 7);
 }
 
 .bookButton:active {
@@ -107,7 +120,7 @@
 
 .additionalInfoContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 50px;
   border: solid 1px gray;
   padding-top: 30px;
@@ -151,6 +164,10 @@
     zoom: 80%;
   }
 
+  .propertyImage {
+    max-height: 250px;
+  }
+
   .propertyInfo {
     zoom: 95%;
     align-items: start;
@@ -159,8 +176,8 @@
 
   .prev,
   .next {
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     padding: 15px;
   }
 
@@ -183,11 +200,19 @@
     padding-inline: 30px;
     gap: 0px;
   }
+
+  .propertyImageIndex {
+    zoom: 80%;
+  }
 }
 
 /* TABLET VIEW */
 
 @media only screen and (min-width: 650px) and (max-width: 768px) {
+  .propertyImage {
+    max-height: 500px;
+  }
+
   .dimensionsContainer {
     zoom: 80%;
   }

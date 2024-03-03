@@ -4,6 +4,7 @@ import styles from '../styles/HomePage.module.css';
 import { useNavigate } from 'react-router-dom';
 import ViewProperties from '../components/ViewProperties';
 import PropertyLocations from '../components/PropertyLocations';
+import ClientReviews from '../components/ClientReviews';
 
 function HomePage() {
   const [data, setData] = useState([]);
@@ -125,6 +126,7 @@ function HomePage() {
         </div>
         <PropertyLocations />
         <ViewProperties />
+        <ClientReviews />
       </Layout>
     </>
   );

@@ -1,7 +1,8 @@
 .coverPhoto {
-  max-height: 13rem;
+  height: 2000px;
   width: 100%;
   object-fit: cover;
+  z-index: 0;
 }
 
 .title {
@@ -12,15 +13,17 @@
 }
 
 .bookContainer {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 650px;
   margin-inline: auto;
-  margin-top: 100px;
-  text-align: left;
-  padding-inline: 20px;
-  margin-bottom: 150px;
+  text-align: justify;
+  z-index: 0;
+  margin-top: -1900px;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 120px;
 }
 
 .inputContainer {
@@ -29,7 +32,6 @@
   width: 100%;
   padding-block: 20px;
   margin-inline: 20px;
-  border: solid 1px gray;
 }
 
 .inputFirstName,
@@ -171,18 +173,6 @@
   }
 }
 
-@media only screen and (max-width: 520px) {
-  .coverPhoto {
-    max-height: 8rem;
-  }
-}
-
-@media only screen and (min-width: 520px) and (max-width: 650px) {
-  .coverPhoto {
-    max-height: 10rem;
-  }
-}
-
 @media only screen and (min-width: 321px) and (max-width: 649px) {
   .title {
     zoom: 80%;
@@ -207,13 +197,5 @@
   .errorTime,
   .message {
     margin-inline: 20px;
-  }
-}
-
-/* TABLET VIEW */
-
-@media only screen and (min-width: 650px) and (max-width: 900px) {
-  .coverPhoto {
-    max-height: 10rem;
   }
 }

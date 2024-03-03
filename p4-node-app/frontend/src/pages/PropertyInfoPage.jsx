@@ -40,6 +40,11 @@ function PropertyInfoPage() {
     navigate('/book');
   };
 
+  const openImageInNewTab = (imageUrl) => {
+    const newWindow = window.open(imageUrl, '_blank', 'noopener,noreferrer');
+    if (newWindow) newWindow.opener = null;
+  };
+
   return (
     <>
       <Layout>
@@ -52,12 +57,15 @@ function PropertyInfoPage() {
                 {property.price?.toLocaleString()}
               </h1>
               <h3 className={styles.propertyStatus}>{property.status}</h3>
-              <hr />
+              <div className={styles.line}></div>
               <div className={styles.propertyImageContainer}>
                 <img
                   src={property.images?.[currentImage]}
                   alt={`Property Image ${currentImage + 1}`}
                   className={styles.propertyImage}
+                  onClick={() =>
+                    openImageInNewTab(property.images?.[currentImage])
+                  }
                 />
                 {property.images?.length > 1 && (
                   <div>
