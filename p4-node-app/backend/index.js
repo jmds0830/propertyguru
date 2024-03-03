@@ -18,7 +18,9 @@ import 'dotenv/config';
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-await mongoose.connect('mongodb://127.0.0.1:27017/propertyguru');
+await mongoose.connect(process.env.DB_URL, {
+  dbName: process.env.DB_NAME,
+});
 
 app.set('port', PORT);
 app.use(bodyParser.json());
