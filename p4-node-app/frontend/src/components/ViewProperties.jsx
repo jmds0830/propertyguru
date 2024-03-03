@@ -13,7 +13,6 @@ function viewProperties() {
   const delay = 4000;
 
   useEffect(() => {
-    window.scrollTo(0, 0);
     const intervalId = setInterval(() => {
       setCurrentImageIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1

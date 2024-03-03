@@ -79,7 +79,7 @@ option {
 
 /* MOBILE VIEW */
 
-@media only screen and (max-width: 649px) {
+@media only screen and (max-width: 430px) {
   .searchMenuContainer {
     margin-top: -90px;
     zoom: 90%;
@@ -87,6 +87,27 @@ option {
 
   .searchTitle {
     zoom: 80%;
+    padding-inline: 40px;
+  }
+
+  .searchMenu {
+    padding-inline: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+  }
+}
+
+@media only screen and (min-width: 430px) and (max-width: 650px) {
+  .searchMenuContainer {
+    margin-top: -90px;
+    zoom: 90%;
+  }
+
+  .searchTitle {
+    zoom: 80%;
+  }
+
+  .searchMenu {
+    padding-inline: 40px;
   }
 }
 
@@ -99,5 +120,9 @@ option {
 
   .searchTitle {
     zoom: 80%;
+  }
+
+  .searchMenu {
+    padding-inline: 40px;
   }
 }
