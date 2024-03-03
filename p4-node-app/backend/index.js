@@ -13,6 +13,7 @@ import validateMessageMiddleware from './middlewares/validateMessageMiddleware.j
 import validateBookingMiddleware from './middlewares/validateBookingMiddleware.js';
 import validateSubscriptionMiddleware from './middlewares/validateSubscriptionMiddleware.js';
 import cors from 'cors';
+import 'dotenv/config';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
