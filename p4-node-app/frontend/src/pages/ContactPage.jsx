@@ -17,20 +17,23 @@ function ContactPage() {
 
   async function handleSubmit() {
     try {
-      const response = await fetch('http://localhost:3000/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          firstName: contactData.firstName,
-          lastName: contactData.lastName,
-          email: contactData.email,
-          contact: parseInt(contactData.contact),
-          customerType: contactData.customerType,
-          customerMessage: contactData.customerMessage,
-        }),
-      });
+      const response = await fetch(
+        'https://propertyguru-wtmh.onrender.com/contact',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            firstName: contactData.firstName,
+            lastName: contactData.lastName,
+            email: contactData.email,
+            contact: parseInt(contactData.contact),
+            customerType: contactData.customerType,
+            customerMessage: contactData.customerMessage,
+          }),
+        }
+      );
 
       const result = await response.json();
       const updatedErrors = {};
@@ -85,15 +88,18 @@ function ContactPage() {
 
     if (value.trim() === '') {
       try {
-        const response = await fetch('http://localhost:3000/contact', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            [name]: value,
-          }),
-        });
+        const response = await fetch(
+          'https://propertyguru-wtmh.onrender.com/contact',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              [name]: value,
+            }),
+          }
+        );
 
         const result = await response.json();
 

@@ -16,18 +16,21 @@ function Contact() {
 
   async function handleSubmit() {
     try {
-      const response = await fetch('http://localhost:3000/subscribe', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          firstName: subscriptionData.firstName,
-          lastName: subscriptionData.lastName,
-          email: subscriptionData.email,
-          contact: parseInt(subscriptionData.contact),
-        }),
-      });
+      const response = await fetch(
+        'https://propertyguru-wtmh.onrender.com/subscribe',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            firstName: subscriptionData.firstName,
+            lastName: subscriptionData.lastName,
+            email: subscriptionData.email,
+            contact: parseInt(subscriptionData.contact),
+          }),
+        }
+      );
 
       const result = await response.json();
       const updatedErrors = {};
@@ -70,15 +73,18 @@ function Contact() {
 
     if (value.trim() === '') {
       try {
-        const response = await fetch('http://localhost:3000/subscribe', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            [name]: value,
-          }),
-        });
+        const response = await fetch(
+          'https://propertyguru-wtmh.onrender.com/subscribe',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              [name]: value,
+            }),
+          }
+        );
 
         const result = await response.json();
 

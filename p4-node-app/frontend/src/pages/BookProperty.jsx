@@ -22,22 +22,25 @@ function BookProperty() {
         return;
       }
 
-      const response = await fetch('http://localhost:3000/book', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          firstName: formData.firstName,
-          lastName: formData.lastName,
-          email: formData.email,
-          contact: parseInt(formData.contact),
-          propertyId: parseInt(formData.propertyId),
-          scheduleDate: formData.scheduleDate,
-          scheduleTime: formData.scheduleTime,
-          customerMessage: formData.customerMessage,
-        }),
-      });
+      const response = await fetch(
+        'https://propertyguru-wtmh.onrender.com/book',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            contact: parseInt(formData.contact),
+            propertyId: parseInt(formData.propertyId),
+            scheduleDate: formData.scheduleDate,
+            scheduleTime: formData.scheduleTime,
+            customerMessage: formData.customerMessage,
+          }),
+        }
+      );
 
       const result = await response.json();
       const updatedErrors = {};
@@ -96,15 +99,18 @@ function BookProperty() {
 
     if (value.trim() === '') {
       try {
-        const response = await fetch('http://localhost:3000/book', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            [name]: value,
-          }),
-        });
+        const response = await fetch(
+          'https://propertyguru-wtmh.onrender.com/book',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              [name]: value,
+            }),
+          }
+        );
 
         const result = await response.json();
 

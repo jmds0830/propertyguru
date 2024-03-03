@@ -11,7 +11,9 @@ function PropertyInfoPage() {
 
   async function fetchPropertyData() {
     try {
-      const response = await fetch(`http://localhost:3000/property/${id}`);
+      const response = await fetch(
+        `https://propertyguru-wtmh.onrender.com/property/${id}`
+      );
       const result = await response.json();
 
       setPropertyData(result);
