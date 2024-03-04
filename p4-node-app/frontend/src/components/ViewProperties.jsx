@@ -35,7 +35,7 @@ function viewProperties() {
             alt={`Interiror image ${currentImageIndex + 1}`}
           />
           <div className={styles.viewPropertiesText}>
-            <span>We are PropertyGuru.</span>
+            <span>You are in good hands with PropertyGuru.</span>
             <h2>FIND YOUR PERFECT HOME WITH US.</h2>
             <p>Browse through our listings of properties for sale.</p>
             <button

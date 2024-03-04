@@ -143,8 +143,8 @@ function BookProperty() {
           <div className={styles.inputContainer}>
             <div className={styles.title}>
               <h1>
-                RESERVE A <br />
-                VIEWING SCHEDULE
+                SCHEDULE A <br />
+                PROPERTY VISIT
               </h1>
             </div>
             <input
