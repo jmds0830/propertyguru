@@ -23,7 +23,14 @@ function Layout({ children }) {
             alt="facebook"
           />
           <p>
-            <Link className={styles.topLink}>Like us on Facebook</Link>
+            <Link
+              className={styles.topLink}
+              to="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Like us on Facebook
+            </Link>
           </p>
           <img
             className={styles.topInstagram}
@@ -31,11 +38,25 @@ function Layout({ children }) {
             alt="instagram"
           />
           <p>
-            <Link className={styles.topLink}>Follow us on Instagram</Link>
+            <Link
+              className={styles.topLink}
+              to="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Follow us on Instagram
+            </Link>
           </p>
           <img className={styles.topX} src="/x.png" alt="x" />
           <p>
-            <Link className={styles.topLink}>Follow us on X</Link>
+            <Link
+              className={styles.topLink}
+              to="https://twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Follow us on X
+            </Link>
           </p>
         </div>
       </div>
@@ -128,21 +149,33 @@ function Layout({ children }) {
         <div className={styles.socialContainer}>
           <h3>CONNECT WITH US</h3>
           <div className={styles.social}>
-            <Link>
+            <Link
+              to="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 className={styles.instagram}
                 src="/instagram.png"
                 alt="instagram"
               />
             </Link>
-            <Link>
+            <Link
+              to="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 className={styles.facebook}
                 src="/facebook.png"
                 alt="facebook"
               />
             </Link>
-            <Link>
+            <Link
+              to="https://twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img className={styles.x} src="/x.png" alt="x" />
             </Link>
           </div>
