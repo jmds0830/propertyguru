@@ -130,6 +130,7 @@ a:hover {
 .social {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
 .facebook,
@@ -140,7 +141,7 @@ a:hover {
 }
 
 .x {
-  height: 20px;
+  height: 22px;
   padding-inline: 10px;
   margin-bottom: 50px;
 }
@@ -161,9 +162,12 @@ a:hover {
 
 .footerText {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   font-size: 12px;
-  color: rgb(206, 206, 206);
+  color: rgb(206, 206, 206, 0.5);
+  padding-bottom: 20px;
 }
 
 .hamburger {
@@ -221,13 +225,6 @@ a:hover {
   border: solid 1px;
   background-color: rgb(7, 7, 7);
   color: white;
-}
-
-.footerLine {
-  height: 0.5px;
-  width: 100%;
-  background-color: rgb(206, 206, 206, 0.5);
-  margin-top: 20px;
 }
 
 /* MOBILE VIEW */

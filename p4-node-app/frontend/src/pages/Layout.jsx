@@ -180,9 +180,9 @@ function Layout({ children }) {
             </Link>
           </div>
         </div>
-        <div className={styles.footerLine}></div>
         <div className={styles.footerText}>
-          <p>Made by Jhune Michael Segismundo • 2024</p>
+          <span>© Jhune Michael Segismundo • 2024</span>
+          <span>Made using React</span>
         </div>
       </footer>
     </>
