@@ -179,9 +179,10 @@ function Layout({ children }) {
               <img className={styles.x} src="/x.png" alt="x" />
             </Link>
           </div>
-          <div className={styles.footerText}>
-            <p>created by jm segismundo</p>
-          </div>
+        </div>
+        <div className={styles.footerLine}></div>
+        <div className={styles.footerText}>
+          <p>Made by Jhune Michael Segismundo • 2024</p>
         </div>
       </footer>
     </>
